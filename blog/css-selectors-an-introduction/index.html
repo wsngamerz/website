@@ -1,0 +1,105 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 2.21.22"/><title data-react-helmet="true"></title><link rel="icon" href="/favicon-32x32.png?v=11a872a6bca57d1ac428abf41dce6bff"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#663399"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=11a872a6bca57d1ac428abf41dce6bff"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=11a872a6bca57d1ac428abf41dce6bff"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=11a872a6bca57d1ac428abf41dce6bff"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=11a872a6bca57d1ac428abf41dce6bff"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=11a872a6bca57d1ac428abf41dce6bff"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=11a872a6bca57d1ac428abf41dce6bff"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=11a872a6bca57d1ac428abf41dce6bff"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=11a872a6bca57d1ac428abf41dce6bff"/><link as="script" rel="preload" href="/webpack-runtime-c776ac2a0e6e618d0f0d.js"/><link as="script" rel="preload" href="/framework-187c087616c05ac79682.js"/><link as="script" rel="preload" href="/b637e9a5-dbcd72adc8e5d522e3bb.js"/><link as="script" rel="preload" href="/app-7e31b432d1059302c847.js"/><link as="script" rel="preload" href="/component---src-templates-blog-template-js-7b17d33dd3c2f4a62d4e.js"/><link as="fetch" rel="preload" href="/page-data\blog\css-selectors-an-introduction\page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data\app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="blog-post-container"><div class="blog-post"><h1>CSS Selectors: An Introduction</h1><h2>May 12, 2020</h2><div class="blog-post-content"><p>If you’ve ever used CSS, you should already know about selectors but in case you’ve forgotten, you need a refresher or
+you have no idea what I’m talking about, I’ll explain what they are and how to use them.</p>
+<!--more-->
+<h3>What are selectors?</h3>
+<p>Selectors are quite easy to understand in concept. They select one or more elements conditionally based upon what you
+tell it to do and as a result, the styles that you write after the selector will be applied to the HTML element or
+elements that the selector relates to.</p>
+<p>{{&#x3C; img src="basic-css-selectors.png"
+caption="The 4 basic CSS selectors" >}}</p>
+<p>For example, the above selectors are some of the basic ones that you’ll probably come across when first learning CSS so
+in this first technical post of mine, I will be explaining these but in the future, I will be writing about some of the
+more advanced CSS selectors such as pseudo selectors.</p>
+<p>Here are the selectors that I’m going to be talking about in this post:</p>
+<table>
+<thead>
+<tr>
+<th>Selector</th>
+<th>Example</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wildcard</td>
+<td>*</td>
+<td>Selects all elements</td>
+</tr>
+<tr>
+<td>Element</td>
+<td>p</td>
+<td>Selects all &#x3C;p> elements</td>
+</tr>
+<tr>
+<td>Class</td>
+<td>.heading</td>
+<td>Selects all elements with class="heading"</td>
+</tr>
+<tr>
+<td>Id</td>
+<td>#firstname</td>
+<td>Selects the element with id="firstname"</td>
+</tr>
+</tbody>
+</table>
+<h3>Wildcard selector</h3>
+<p>The wildcard selector (also referred to as being the Universal selector) will select all elements within its scope.</p>
+<p>{{&#x3C; img src="wildcard-selector.png"
+caption="An example of a common use of wildcards. This will remove the default margin and padding of all elements" >}}</p>
+<p>Although this can be a useful selector, it’s usually classed as being bad practice and recommended to not be used. This
+is due to CSS specificity and performance. Using the wildcard selector means that you will be applying the styling
+specified to all child elements indiscriminately which as a result, makes it harder on yourself (and to others who may
+be maintaining your CSS in the future) to apply styling to individual elements.</p>
+<p>However, as with most ‘good’ and ‘bad’ practices, this is to be taken with a pinch of salt as there are edge cases to
+consider when using CSS so don’t take them as law.</p>
+<h3>Element Selector</h3>
+<p>An element selector (can also be called a type selector) matches elements on the basis of tag names.</p>
+<p>{{&#x3C; img src="element-selector.png"
+caption="An example of using an element selector to style paragraphs" >}}</p>
+<p>Take the example above, here we are selecting all of the paragraph elements on the page, and for some reason, we have
+decided to turn them all red, make them italic and font size of 18px.</p>
+<p>Okay, so knowing about CSS selectors doesn’t necessarily mean that you’ll be able to make things look beautiful but its
+a start!</p>
+<h3>Class Selector</h3>
+<p>Next up is going to be our most commonly used selector, the class selector. Class selectors consist of a dot prefixed
+before the class name. The class name is defined in the class attribute in an HTML element and multiple elements are
+allowed to have the same class name. As a result, the class selector matches all HTML elements with the same class
+name.</p>
+<p>{{&#x3C; img src="class-selectors.png"
+caption="Three example css classes" >}}</p>
+<p>In the above example, we have defined three CSS classes that we can use to style elements which have those classes in
+their class attributes.</p>
+<p>{{&#x3C; img src="html-class-attribute.png"
+caption="An assortment of paragraphs being styled using the HTML class attribute" >}}</p>
+<p>Furthermore, each HTML element isn’t limited to having only one class, it can have as many as it wants.</p>
+<h3>Id Selector</h3>
+<p>Finally, the Id selector is the most specific selector. This means that it should only relate to a single element in
+the document. The Id selector consists of a hashtag prefixed before the id name of the HTML element.</p>
+<p>{{&#x3C; img src="id-selector.png"
+caption="An example showing the use of an Id selector" >}}</p>
+<p>Furthermore, the Id selector is used very similarly to the Class selector mentioned above but instead of using the
+class attribute in HTML, we use the id attribute, as shown below.</p>
+<p>{{&#x3C; img src="html-id-attribute.png"
+caption="A paragraph element being styled using the HTML Id attribute" >}}</p>
+<h3>Conclusion</h3>
+<p>In conclusion, CSS selectors are pretty easy to get your head around and are a very powerful tool for web designers if
+handled properly. If you enjoyed this post and found it useful, leave a comment or a reaction below.</p>
+<p>Thanks for reading!</p></div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-75997847-9"></script><script>
+    window.GATSBY_GTAG_PLUGIN_GA_TRACKING_ID = (
+      'UA-75997847-9'
+    );
+    window.GATSBY_GTAG_PLUGIN_ANONYMIZE = false;
+
+    var options = {
+      send_page_view: false
+    };
+    if (false) {
+      options.anonymize_ip = true;
+    }
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', 'UA-75997847-9', options);
+  </script><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/blog/css-selectors-an-introduction";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-7e31b432d1059302c847.js"],"component---src-pages-404-js":["/component---src-pages-404-js-003113cc3af61d574969.js"],"component---src-pages-about-js":["/component---src-pages-about-js-eef2f143be40664f4c1c.js"],"component---src-pages-blog-js":["/component---src-pages-blog-js-37a2c1c0038cd75f5b59.js"],"component---src-pages-contact-js":["/component---src-pages-contact-js-500b3884fd86c12143ca.js"],"component---src-pages-index-js":["/component---src-pages-index-js-d12a72a16eb39d0bef7b.js"],"component---src-pages-privacy-policy-js":["/component---src-pages-privacy-policy-js-b37765aaac59ea727b87.js"],"component---src-pages-projects-js":["/component---src-pages-projects-js-eb84b24d80e14dac7b66.js"],"component---src-pages-search-js":["/component---src-pages-search-js-846e65bf650d9056a8f6.js"],"component---src-pages-terms-js":["/component---src-pages-terms-js-4081557d29e6ac063cd6.js"],"component---src-templates-blog-template-js":["/component---src-templates-blog-template-js-7b17d33dd3c2f4a62d4e.js"]};/*]]>*/</script><script src="/component---src-templates-blog-template-js-7b17d33dd3c2f4a62d4e.js" async=""></script><script src="/app-7e31b432d1059302c847.js" async=""></script><script src="/b637e9a5-dbcd72adc8e5d522e3bb.js" async=""></script><script src="/framework-187c087616c05ac79682.js" async=""></script><script src="/webpack-runtime-c776ac2a0e6e618d0f0d.js" async=""></script></body></html>
