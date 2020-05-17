@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[8],{RXBc:function(e,t,n){"use strict";n.r(t);var a=n("q1tI"),l=n.n(a),o=n("L6Je"),r=n("ULaD"),i=n("RgTv");t.default=function(){return l.a.createElement(o.a,null,l.a.createElement(r.a,{title:"Home"}),l.a.createElement(i.a,{title:"William Neild",subtitle:"An aspriring software developer",typewriter:!0,alternatives:["A student who loves technology","A future blogging star"],big:!0,buttons:[["Blog","/blog"],["Projects","/projects"]]}))}}}]);
-//# sourceMappingURL=component---src-pages-index-js-d12a72a16eb39d0bef7b.js.map
