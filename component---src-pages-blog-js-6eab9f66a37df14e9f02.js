@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[7],{vx99:function(e,t,a){"use strict";a.r(t);var n=a("q1tI"),l=a.n(n),c=a("L6Je"),o=a("ULaD"),r=a("RgTv");t.default=function(){return l.a.createElement(c.a,null,l.a.createElement(o.a,{title:"Blog"}),l.a.createElement(r.a,{title:"Blog"}))}}}]);
-//# sourceMappingURL=component---src-pages-blog-js-6eab9f66a37df14e9f02.js.map
