@@ -1,0 +1,42 @@
+.pageheader {
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;
+    margin-top: 3rem;
+
+    &.pageheader-big {
+        height: 100vh;
+
+        .pageheader-body {
+            height: 100vh;
+        }
+    }
+
+    .pageheader-background {
+        width: 100%;
+        height: 100%;
+
+        svg {
+            min-width: 100%;
+            min-height: 100%;
+        }
+    }
+
+    .pageheader-image {
+        height: 100%;
+    }
+
+    .pageheader-body {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50vh;
+        color: #eee;
+        padding-top: 4rem;
+
+        .pageheader-subtitle {
+            font-weight: lighter;
+        }
+    }
+}
