@@ -45,6 +45,10 @@ $enable-responsive-font-sizes: true;
     text-align: justify;
 }
 
+html {
+    overflow-x: hidden;
+}
+
 .youtube-container {
     position: relative;
     width: 100%;

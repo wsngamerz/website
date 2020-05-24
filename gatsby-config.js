@@ -45,6 +45,14 @@ module.exports = {
             },
         },
         {
+            resolve: "gatsby-plugin-sentry",
+            options: {
+                dsn: "https://a8e3a683c5f84b9cbd1928e1145c1dc5@o294554.ingest.sentry.io/5249583",
+                environment: process.env.NODE_ENV,
+                enabled: (() => ["production", "stage", "development"].indexOf(process.env.NODE_ENV) !== -1)(),
+            },
+        },
+        {
             resolve: "gatsby-plugin-mdx",
             options: {
                 defaultLayouts: {
