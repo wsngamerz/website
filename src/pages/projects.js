@@ -9,7 +9,10 @@ import Card from "../components/Card"
 
 const ProjectsPage = ({ data }) => (
     <Layout>
-        <Meta title="Projects" />
+        <Meta
+            title="Projects"
+            description="A collection of my projects which I have worked on. Basically my portfolio"
+        />
         <PageHeader title="Projects" />
         <div className="container my-4">
             <div className="row">

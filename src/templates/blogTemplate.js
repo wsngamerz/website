@@ -15,7 +15,7 @@ export default function BlogTemplate({ data, location }) {
 
     return (
         <Layout>
-            <Meta title={frontmatter.title} />
+            <Meta title={frontmatter.title} description={frontmatter.description} />
             <PageHeader image={frontmatter.thumbnail.childImageSharp.fluid} />
 
             <div className="container">
@@ -58,9 +58,10 @@ export const pageQuery = graphql`
         mdx(frontmatter: { slug: { eq: $slug } }) {
             body
             frontmatter {
-                date(formatString: "MMMM DD, YYYY")
+                date
                 slug
                 title
+                description
                 author
                 thumbnail {
                     childImageSharp {

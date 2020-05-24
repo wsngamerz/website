@@ -9,7 +9,10 @@ import Card from "../components/Card"
 
 const BlogPage = ({ data }) => (
     <Layout>
-        <Meta title="Blog" />
+        <Meta
+            title="Blog"
+            description="A collection of my blog posts which cover a variety of topics including software development and some of my life stories"
+        />
         <PageHeader title="Blog" />
         <div className="container my-4">
             <div className="row">

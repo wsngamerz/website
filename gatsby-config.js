@@ -21,6 +21,7 @@ module.exports = {
         },
     },
     plugins: [
+        "gatsby-plugin-offline",
         "gatsby-plugin-react-helmet",
         "gatsby-plugin-sass",
         "gatsby-remark-reading-time",
@@ -93,8 +94,5 @@ module.exports = {
                 trackingId: "UA-75997847-9",
             },
         },
-        // this (optional) plugin enables Progressive Web App + Offline functionality
-        // To learn more, visit: https://gatsby.dev/offline
-        // "gatsby-plugin-offline",
     ],
 }

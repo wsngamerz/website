@@ -159,7 +159,7 @@ export const query = graphql`
                 node {
                     excerpt(pruneLength: 160)
                     frontmatter {
-                        date(formatString: "MMMM DD, YYYY")
+                        date
                         slug
                         title
                         description

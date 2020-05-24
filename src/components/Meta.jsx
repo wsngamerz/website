@@ -35,6 +35,7 @@ const Meta = ({ title, description, image, post }) => {
         <Helmet title={seo.title} titleTemplate={siteMeta.titleTemplate}>
             <meta name="description" content={seo.description} />
             <meta name="image" content={seo.image} />
+            <link rel="alternate" href="https://williamneild.com/" hreflang="en" />
 
             <meta property="og:title" content={seo.title} />
             <meta property="og:description" content={seo.description} />

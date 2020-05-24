@@ -17,7 +17,7 @@ export default class SearchPage extends Component {
     render() {
         return (
             <Layout>
-                <Meta title="Search" />
+                <Meta title="Search" description="search" />
                 <PageHeader title="Search" />
                 <div className="gcse-search"></div>
             </Layout>

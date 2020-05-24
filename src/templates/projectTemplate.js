@@ -13,7 +13,7 @@ export default function ProjectTemplate({ data }) {
     const { frontmatter, body } = mdx
     return (
         <Layout>
-            <Meta title={frontmatter.title} />
+            <Meta title={frontmatter.title} description={frontmatter.description} />
             <PageHeader title={frontmatter.title} />
 
             <div className="container">
@@ -32,9 +32,9 @@ export const pageQuery = graphql`
         mdx(frontmatter: { slug: { eq: $slug } }) {
             body
             frontmatter {
-                date(formatString: "MMMM DD, YYYY")
                 slug
                 title
+                description
                 thumbnail {
                     childImageSharp {
                         fluid(maxWidth: 1200) {
