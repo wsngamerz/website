@@ -9,3 +9,10 @@
 import "jquery/dist/jquery.min.js"
 import "popper.js/dist/popper.min"
 import "bootstrap/dist/js/bootstrap.min.js"
+
+import LogRocket from "logrocket"
+
+export const onClientEntry = () => {
+    console.log("We've started!")
+    LogRocket.init("8zhkwi/williamneildcom")
+}
