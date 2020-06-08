@@ -70,7 +70,7 @@ const IndexPage = ({ data }) => {
             <div>
                 <div className="container">
                     <div className="row">
-                        <div className="col-12">
+                        <div className="col-12 my-4">
                             <Advert />
                         </div>
                     </div>
@@ -116,7 +116,7 @@ const IndexPage = ({ data }) => {
                                 <SocialMediaItem
                                     text="Facebook"
                                     icon={FaFacebook}
-                                    url="https://facebook.com/profile.php?id=100009434476455"
+                                    url="https://www.facebook.com/william.neild.2"
                                 />
                                 <SocialMediaItem text="Twitter" icon={FaTwitter} url="https://twitter.com/wsngamerz" />
                                 <SocialMediaItem
