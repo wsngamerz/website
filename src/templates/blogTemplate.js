@@ -1,7 +1,7 @@
 import React from "react"
 
 import { graphql } from "gatsby"
-import RelativeTime from "react-relative-time"
+// import RelativeTime from "react-relative-timer"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { DiscussionEmbed } from "disqus-react"
 
@@ -24,7 +24,8 @@ export default function BlogTemplate({ data, location }) {
                         <h2 className="display-3">{frontmatter.title}</h2>
                         <p className="text-muted">
                             <small>
-                                Posted <RelativeTime value={frontmatter.date} />
+                                {/* Posted <RelativeTime value={frontmatter.date} /> */}
+                                Posted {frontmatter.date}
                             </small>
                             <small className="px-1">&middot;</small>
                             <small>by {frontmatter.author}</small>

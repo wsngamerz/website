@@ -3,7 +3,7 @@ import React from "react"
 import { Link } from "gatsby"
 import Img from "gatsby-image"
 
-import RelativeTime from "react-relative-time"
+// import RelativeTime from "react-relative-timer"
 
 const Card = ({ title, thumbnail, description, url, post }) => {
     return (
@@ -25,7 +25,8 @@ const Card = ({ title, thumbnail, description, url, post }) => {
                         <small>by {post.author}</small>
                         <span> - </span>
                         <small>
-                            Posted <RelativeTime value={post.date} />
+                            {/* Posted <RelativeTime value={post.date} /> */}
+                            Posted {post.date}
                         </small>
                     </p>
                 ) : (
