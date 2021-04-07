@@ -1,6 +1,6 @@
 export const defaultTheme = {
     fonts: {
-        default: "'Fira Code VF', monospace"
+        default: "'Fira Code', monospace"
     },
     colours: {
         surface: {

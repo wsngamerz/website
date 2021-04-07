@@ -1,6 +1,10 @@
-import * as React from "react";
+import React, { FunctionComponent } from "react";
 
-export function Logo(props: { className: string | undefined; }) {
+type Props = {
+    className?: string
+}
+
+export const Logo: FunctionComponent<Props> = (props) => {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" width={512} height={512} viewBox="0 0 512 512" className={props.className}>
             <defs>

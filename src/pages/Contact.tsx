@@ -3,7 +3,7 @@ import React from "react"
 import { Navigation } from "../components/Navigation"
 
 
-export function Contact() {
+export const Contact = () => {
     return (
         <>
             <Navigation />

@@ -51,7 +51,7 @@ const NavigationLink = styled(Link)`
 `
 
 
-export function Navigation() {
+export const Navigation = () => {
     return (
         <NavigationContainer>
             <NavigationSiteName>
