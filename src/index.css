@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .h-75vh {
+        height: 75vh;
+    }
+}
+
+html {
+    font-family: 'Fira Code', monospace;
+}
