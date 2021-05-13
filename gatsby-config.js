@@ -14,7 +14,7 @@ module.exports = {
         socialMedia: {
             twitterUrl: "https://twitter.com/wsngamerz",
             twitterUsername: "wsngamerz",
-            facebookUrl: "https://www.facebook.com/profile.php?id=100009434476455",
+            facebookUrl: "https://www.facebook.com/william.neild.2",
             githubUrl: "https://github.com/wsngamerz",
             instagramUrl: "https://www.instagram.com/wneild5",
             linkedinUrl: "https://www.linkedin.com/in/wneild5",

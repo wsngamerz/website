@@ -16,7 +16,7 @@ const BlogPage = ({ data }) => (
         <PageHeader title="Blog" />
         <div className="container my-4">
             <div className="row">
-                {data.posts.edges.map(edge => {
+                {data.posts.edges.filter(p => p.node.frontmatter.publish !== false).map(edge => {
                     const post = edge.node.frontmatter
                     return (
                         <div className="col-12 mb-4 py-0 px-3" key={post.slug}>
@@ -61,6 +61,7 @@ export const query = graphql`
                                 }
                             }
                         }
+                        publish
                     }
                 }
             }

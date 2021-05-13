@@ -24,8 +24,7 @@ export default function BlogTemplate({ data, location }) {
                         <h2 className="display-3">{frontmatter.title}</h2>
                         <p className="text-muted">
                             <small>
-                                {/* Posted <RelativeTime value={frontmatter.date} /> */}
-                                Posted {frontmatter.date}
+                                Posted {new Date(frontmatter.date).toLocaleDateString()}
                             </small>
                             <small className="px-1">&middot;</small>
                             <small>by {frontmatter.author}</small>

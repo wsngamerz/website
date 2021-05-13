@@ -3,7 +3,11 @@ import React from "react"
 import { Link } from "gatsby"
 import Img from "gatsby-image"
 
-// import RelativeTime from "react-relative-timer"
+import TimeAgo from "javascript-time-ago"
+import enGB from "javascript-time-ago/locale/en-GB"
+
+TimeAgo.addDefaultLocale(enGB)
+const timeAgo = new TimeAgo('en-GB')
 
 const Card = ({ title, thumbnail, description, url, post }) => {
     return (
@@ -25,8 +29,7 @@ const Card = ({ title, thumbnail, description, url, post }) => {
                         <small>by {post.author}</small>
                         <span> - </span>
                         <small>
-                            {/* Posted <RelativeTime value={post.date} /> */}
-                            Posted {post.date}
+                            Posted {timeAgo.format(new Date(post.date))}
                         </small>
                     </p>
                 ) : (

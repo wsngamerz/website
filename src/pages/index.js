@@ -84,7 +84,7 @@ const IndexPage = ({ data }) => {
                             <h3 className="mb-3">Recent Posts</h3>
                         </div>
                         <div className="col-sm-12 col-md-8">
-                            {data.latestPosts.edges.map(edge => {
+                            {data.latestPosts.edges.filter(p => p.node.frontmatter.publish !== false).map(edge => {
                                 const post = edge.node.frontmatter
                                 return (
                                     <div className="col-12 mb-4 p-0" key={post.slug}>
@@ -171,6 +171,7 @@ export const query = graphql`
                                 }
                             }
                         }
+                        publish
                     }
                 }
             }

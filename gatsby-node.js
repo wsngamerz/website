@@ -16,6 +16,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
                     node {
                         frontmatter {
                             slug
+                            publish
                         }
                     }
                 }
@@ -30,22 +31,24 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     }
 
     result.data.allMdx.edges.forEach(({ node }) => {
-        let component = null
-
-        if (node.frontmatter.slug.startsWith("/blog/")) {
-            component = blogPostTemplate
-        } else if (node.frontmatter.slug.startsWith("/projects/")) {
-            component = projectTemplate
+        if (node.frontmatter.publish !== false) {
+            let component = null
+    
+            if (node.frontmatter.slug.startsWith("/blog/")) {
+                component = blogPostTemplate
+            } else if (node.frontmatter.slug.startsWith("/projects/")) {
+                component = projectTemplate
+            }
+    
+            createPage({
+                path: node.frontmatter.slug,
+                component: component,
+                context: {
+                    // additional data can be passed via context
+                    slug: node.frontmatter.slug,
+                },
+            })
         }
-
-        createPage({
-            path: node.frontmatter.slug,
-            component: component,
-            context: {
-                // additional data can be passed via context
-                slug: node.frontmatter.slug,
-            },
-        })
     })
 }
 
