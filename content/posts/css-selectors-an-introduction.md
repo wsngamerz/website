@@ -1,10 +1,10 @@
 ---
 title: "CSS Selectors: An Introduction"
-description: An introductory post into the most common selectors that you'd use in CSS and how to use them
-date: 2020-05-12T12:00:00Z
-slug: /blog/css-selectors-an-introduction
-thumbnail: thumbnail.png
-author: William Neild
+description: "An introduction to the basic CSS selectors."
+author: "William Neild"
+date: 2020-05-12T12:24:49+01:00
+draft: true
+ShowToc: true
 ---
 
 If you’ve ever used CSS, you should already know about selectors but in case you’ve forgotten, you need a refresher or
@@ -27,7 +27,7 @@ Here are the selectors that I’m going to be talking about in this post:
 | Selector | Example    | Description                               |
 | -------- | ---------- | ----------------------------------------- |
 | Wildcard | \*         | Selects all elements                      |
-| Element  | p          | Selects all &lt;p&gt; elements            |
+| Element  | p          | Selects all &lt; p&gt; elements            |
 | Class    | .heading   | Selects all elements with class="heading" |
 | Id       | #firstname | Selects the element with id="firstname"   |
 
@@ -36,8 +36,10 @@ Here are the selectors that I’m going to be talking about in this post:
 The wildcard selector (also referred to as being the Universal selector) will select all elements within its scope.
 
 <Figure
+
     image="wildcard-selector.png"
     caption="An example of a common use of wildcards. This will remove the default margin and padding of all elements"
+
 />
 
 Although this can be a useful selector, it’s usually classed as being bad practice and recommended to not be used. This
@@ -73,8 +75,10 @@ In the above example, we have defined three CSS classes that we can use to style
 their class attributes.
 
 <Figure
+
     image="html-class-attribute.png"
     caption="An assortment of paragraphs being styled using the HTML class attribute"
+
 />
 
 Furthermore, each HTML element isn’t limited to having only one class, it can have as many as it wants.
