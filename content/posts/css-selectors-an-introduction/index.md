@@ -1,10 +1,12 @@
 ---
 title: "CSS Selectors: An Introduction"
-description: "An introduction to the basic CSS selectors."
+description: "An introduction to the basic CSS selectors"
 author: "William Neild"
 date: 2020-05-12T12:24:49+01:00
-draft: true
+draft: false
 ShowToc: true
+cover:
+    image: thumbnail.png
 ---
 
 If you’ve ever used CSS, you should already know about selectors but in case you’ve forgotten, you need a refresher or
@@ -16,7 +18,14 @@ Selectors are quite easy to understand in concept. They select one or more eleme
 tell it to do and as a result, the styles that you write after the selector will be applied to the HTML element or
 elements that the selector relates to.
 
-<Figure image="basic-css-selectors.png" caption="The 4 basic CSS selectors" />
+```css
+/* The 4 basic CSS selectors */
+
+*             /* Wildcard selector */
+p             /* Element selector */
+.classname    /* Class selector */
+#thing        /* ID selector */
+```
 
 For example, the above selectors are some of the basic ones that you’ll probably come across when first learning CSS so
 in this first technical post of mine, I will be explaining these but in the future, I will be writing about some of the
@@ -27,7 +36,7 @@ Here are the selectors that I’m going to be talking about in this post:
 | Selector | Example    | Description                               |
 | -------- | ---------- | ----------------------------------------- |
 | Wildcard | \*         | Selects all elements                      |
-| Element  | p          | Selects all &lt; p&gt; elements            |
+| Element  | p          | Selects all &lt;p&gt; elements            |
 | Class    | .heading   | Selects all elements with class="heading" |
 | Id       | #firstname | Selects the element with id="firstname"   |
 
@@ -35,12 +44,17 @@ Here are the selectors that I’m going to be talking about in this post:
 
 The wildcard selector (also referred to as being the Universal selector) will select all elements within its scope.
 
-<Figure
+```css
+/*
+    A common use case is for browser resets
+    This will remove the default margin and padding for all elements
+*/
 
-    image="wildcard-selector.png"
-    caption="An example of a common use of wildcards. This will remove the default margin and padding of all elements"
-
-/>
+* {
+    margin: 0;
+    padding: 0;
+}
+```
 
 Although this can be a useful selector, it’s usually classed as being bad practice and recommended to not be used. This
 is due to CSS specificity and performance. Using the wildcard selector means that you will be applying the styling
@@ -54,7 +68,15 @@ consider when using CSS so don’t take them as law.
 
 An element selector (can also be called a type selector) matches elements on the basis of tag names.
 
-<Figure image="element-selector.png" caption="An example of using an element selector to style paragraphs" />
+```css
+/* An example of using an element selector to style paragraphs */
+
+p {
+    font-size: 18px;
+    color: red;
+    font-style: italic;
+}
+```
 
 Take the example above, here we are selecting all of the paragraph elements on the page, and for some reason, we have
 decided to turn them all red, make them italic and font size of 18px.
@@ -69,17 +91,42 @@ before the class name. The class name is defined in the class attribute in an HT
 allowed to have the same class name. As a result, the class selector matches all HTML elements with the same class
 name.
 
-<Figure image="class-selectors.png" caption="Three example css classes" />
+```css
+/* Three example CSS classes */
+
+.center {
+    text-align: center;
+}
+
+.large {
+    font-size: 400%;
+}
+
+.red {
+    color: red;
+}
+```
 
 In the above example, we have defined three CSS classes that we can use to style elements which have those classes in
 their class attributes.
 
-<Figure
+```html
+<!-- An assortment of paragraphs being styled using the HTML class attribute -->
 
-    image="html-class-attribute.png"
-    caption="An assortment of paragraphs being styled using the HTML class attribute"
+<p>This is a regular unstyled paragraph</p>
 
-/>
+<p class="large">
+    This is a large paragraph
+</p>
+
+<p class="red">
+    This is a red paragraph
+</p>
+
+<p class="large red center">
+    This is a large, red and center aligned paragraph
+</p>
+```
 
 Furthermore, each HTML element isn’t limited to having only one class, it can have as many as it wants.
 
@@ -88,12 +135,27 @@ Furthermore, each HTML element isn’t limited to having only one class, it can 
 Finally, the Id selector is the most specific selector. This means that it should only relate to a single element in
 the document. The Id selector consists of a hashtag prefixed before the id name of the HTML element.
 
-<Figure image="id-selector.png" caption="An example showing the use of an Id selector" />
+```css
+/* An example showing the use of an ID selector */
+
+#introduction {
+    color: green;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+```
 
 Furthermore, the Id selector is used very similarly to the Class selector mentioned above but instead of using the
 class attribute in HTML, we use the id attribute, as shown below.
 
-<Figure image="html-id-attribute.png" caption="A paragraph element being styled using the HTML Id attribute" />
+```html
+<!-- A paragraph element being styled using the HTML Id attribute -->
+
+<p id="introduction">
+    This is a paragraph which has some introduction text
+    and will only be used once in this page
+</p>
+```
 
 ### Conclusion
 
