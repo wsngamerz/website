@@ -1,14 +1,14 @@
-import React from "react"
+import React from "react";
 
-import { Link, graphql } from "gatsby"
-import { FaFacebook, FaInstagram, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa"
+import { Link, graphql } from "gatsby";
+import { FaFacebook, FaInstagram, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
-import Layout from "../components/Layout"
-import Meta from "../components/Meta"
-import PageHeader from "../components/PageHeader"
-import Card from "../components/Card"
-import SocialMediaItem from "../components/SocialMediaItem"
-import Advert from "../components/Advert"
+import Layout from "../components/Layout";
+import Meta from "../components/Meta";
+import PageHeader from "../components/PageHeader";
+import Card from "../components/Card";
+import SocialMediaItem from "../components/SocialMediaItem";
+import Advert from "../components/Advert";
 
 const IndexPage = ({ data }) => {
     return (
@@ -50,16 +50,16 @@ const IndexPage = ({ data }) => {
                             <p>Here is a list of my projects, basically my portfolio.</p>
                             <div className="card-group py-1">
                                 {data.latestProjects.edges.map(edge => {
-                                    const project = edge.node.frontmatter
+                                    const project = edge.node.frontmatter;
                                     return (
                                         <Card
                                             key={project.slug}
                                             title={project.title}
-                                            thumbnail={project.thumbnail.childImageSharp.fluid}
+                                            thumbnail={project.thumbnail.childImageSharp.gatsbyImageData}
                                             description={project.description}
                                             url={project.slug}
                                         />
-                                    )
+                                    );
                                 })}
                             </div>
                         </div>
@@ -84,23 +84,25 @@ const IndexPage = ({ data }) => {
                             <h3 className="mb-3">Recent Posts</h3>
                         </div>
                         <div className="col-sm-12 col-md-8">
-                            {data.latestPosts.edges.filter(p => p.node.frontmatter.publish !== false).map(edge => {
-                                const post = edge.node.frontmatter
-                                return (
-                                    <div className="col-12 mb-4 p-0" key={post.slug}>
-                                        <Card
-                                            title={post.title}
-                                            thumbnail={post.thumbnail.childImageSharp.fluid}
-                                            description={edge.node.excerpt}
-                                            url={post.slug}
-                                            post={{
-                                                author: post.author,
-                                                date: post.date,
-                                            }}
-                                        />
-                                    </div>
-                                )
-                            })}
+                            {data.latestPosts.edges
+                                .filter(p => p.node.frontmatter.publish !== false)
+                                .map(edge => {
+                                    const post = edge.node.frontmatter;
+                                    return (
+                                        <div className="col-12 mb-4 p-0" key={post.slug}>
+                                            <Card
+                                                title={post.title}
+                                                thumbnail={post.thumbnail.childImageSharp.gatsbyImageData}
+                                                description={edge.node.excerpt}
+                                                url={post.slug}
+                                                post={{
+                                                    author: post.author,
+                                                    date: post.date,
+                                                }}
+                                            />
+                                        </div>
+                                    );
+                                })}
                             <div className="col-12 p-0">
                                 <Link className="btn btn-secondary btn-block mb-4" to="/blog">
                                     View more
@@ -136,10 +138,10 @@ const IndexPage = ({ data }) => {
                 </div>
             </div>
         </Layout>
-    )
-}
+    );
+};
 
-export default IndexPage
+export default IndexPage;
 
 export const query = graphql`
     query HomePageQuery {
@@ -166,9 +168,7 @@ export const query = graphql`
                         author
                         thumbnail {
                             childImageSharp {
-                                fluid(maxWidth: 1200) {
-                                    ...GatsbyImageSharpFluid_withWebp
-                                }
+                                gatsbyImageData
                             }
                         }
                         publish
@@ -185,9 +185,7 @@ export const query = graphql`
                         description
                         thumbnail {
                             childImageSharp {
-                                fluid(maxWidth: 1200) {
-                                    ...GatsbyImageSharpFluid_withWebp
-                                }
+                                gatsbyImageData
                             }
                         }
                     }
@@ -195,4 +193,4 @@ export const query = graphql`
             }
         }
     }
-`
+`;

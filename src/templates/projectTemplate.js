@@ -1,16 +1,16 @@
-import React from "react"
+import React from "react";
 
-import { graphql } from "gatsby"
+import { graphql } from "gatsby";
 
-import { MDXRenderer } from "gatsby-plugin-mdx"
+import { MDXRenderer } from "gatsby-plugin-mdx";
 
-import Layout from "../components/Layout"
-import Meta from "../components/Meta"
-import PageHeader from "../components/PageHeader"
+import Layout from "../components/Layout";
+import Meta from "../components/Meta";
+import PageHeader from "../components/PageHeader";
 
 export default function ProjectTemplate({ data }) {
-    const { mdx } = data
-    const { frontmatter, body } = mdx
+    const { mdx } = data;
+    const { frontmatter, body } = mdx;
     return (
         <Layout>
             <Meta title={frontmatter.title} description={frontmatter.description} />
@@ -24,7 +24,7 @@ export default function ProjectTemplate({ data }) {
                 </div>
             </div>
         </Layout>
-    )
+    );
 }
 
 export const pageQuery = graphql`
@@ -35,14 +35,7 @@ export const pageQuery = graphql`
                 slug
                 title
                 description
-                thumbnail {
-                    childImageSharp {
-                        fluid(maxWidth: 1200) {
-                            ...GatsbyImageSharpFluid_withWebp
-                        }
-                    }
-                }
             }
         }
     }
-`
+`;

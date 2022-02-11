@@ -1,6 +1,6 @@
-import React from "react"
+import React from "react";
 
-import { Link } from "gatsby"
+import { Link } from "gatsby";
 
 const Footer = () => {
     return (
@@ -51,7 +51,7 @@ const Footer = () => {
                 </div>
             </div>
         </footer>
-    )
-}
+    );
+};
 
-export default Footer
+export default Footer;

@@ -1,19 +1,19 @@
-import React from "react"
+import React from "react";
 
-import { Link } from "gatsby"
-import Img from "gatsby-image"
+import { Link } from "gatsby";
+import { GatsbyImage } from "gatsby-plugin-image";
 
-import TimeAgo from "javascript-time-ago"
-import enGB from "javascript-time-ago/locale/en-GB"
+import TimeAgo from "javascript-time-ago";
+import enGB from "javascript-time-ago/locale/en-GB";
 
-TimeAgo.addDefaultLocale(enGB)
-const timeAgo = new TimeAgo('en-GB')
+TimeAgo.addDefaultLocale(enGB);
+const timeAgo = new TimeAgo("en-GB");
 
 const Card = ({ title, thumbnail, description, url, post }) => {
     return (
         <div className="card">
             {post == null && <h5 className="card-header">{title}</h5>}
-            <Img className="card-img-top rounded" fluid={thumbnail} />
+            <GatsbyImage className="card-img-top rounded" image={thumbnail} alt="" />
             <div className="card-body">
                 {post != null && <h5 className="card-title">{title}</h5>}
                 <p className="card-text">{description}</p>
@@ -28,9 +28,7 @@ const Card = ({ title, thumbnail, description, url, post }) => {
                     <p className="card-text text-muted">
                         <small>by {post.author}</small>
                         <span> - </span>
-                        <small>
-                            Posted {timeAgo.format(new Date(post.date))}
-                        </small>
+                        <small>Posted {timeAgo.format(new Date(post.date))}</small>
                     </p>
                 ) : (
                     <Link className="stretched-link" to={url}>
@@ -39,7 +37,7 @@ const Card = ({ title, thumbnail, description, url, post }) => {
                 )}
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default Card
+export default Card;

@@ -1,8 +1,8 @@
-import React from "react"
+import React from "react";
 
-import AdSense from "react-adsense"
+import AdSense from "react-adsense";
 
-const enabled = false
+const enabled = false;
 
 const Advert = () => {
     return enabled ? (
@@ -12,7 +12,7 @@ const Advert = () => {
                 <AdSense.Google client="ca-pub-1817516990902330" slot="4006321015" format="auto" responsive="true" />
             </div>
         </div>
-    ) : null
-}
+    ) : null;
+};
 
-export default Advert
+export default Advert;

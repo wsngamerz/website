@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 
 const Advert = ({ children }) => {
     return (
@@ -7,7 +7,7 @@ const Advert = ({ children }) => {
                 <div className="col-12 p-4">{children}</div>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default Advert
+export default Advert;

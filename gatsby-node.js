@@ -5,9 +5,9 @@
  */
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
-    const { createPage } = actions
-    const blogPostTemplate = require.resolve(`./src/templates/blogTemplate.js`)
-    const projectTemplate = require.resolve(`./src/templates/projectTemplate.js`)
+    const { createPage } = actions;
+    const blogPostTemplate = require.resolve(`./src/templates/blogTemplate.js`);
+    const projectTemplate = require.resolve(`./src/templates/projectTemplate.js`);
 
     const result = await graphql(`
         {
@@ -22,24 +22,24 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
                 }
             }
         }
-    `)
+    `);
 
     // Handle errors
     if (result.errors) {
-        reporter.panicOnBuild(`Error while running GraphQL query.`)
-        return
+        reporter.panicOnBuild(`Error while running GraphQL query.`);
+        return;
     }
 
     result.data.allMdx.edges.forEach(({ node }) => {
         if (node.frontmatter.publish !== false) {
-            let component = null
-    
+            let component = null;
+
             if (node.frontmatter.slug.startsWith("/blog/")) {
-                component = blogPostTemplate
+                component = blogPostTemplate;
             } else if (node.frontmatter.slug.startsWith("/projects/")) {
-                component = projectTemplate
+                component = projectTemplate;
             }
-    
+
             createPage({
                 path: node.frontmatter.slug,
                 component: component,
@@ -47,10 +47,10 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
                     // additional data can be passed via context
                     slug: node.frontmatter.slug,
                 },
-            })
+            });
         }
-    })
-}
+    });
+};
 
 exports.onCreateWebpackConfig = ({ stage, rules, loaders, plugins, actions, getConfig }) => {
     if (stage === "build-html") {
@@ -63,11 +63,11 @@ exports.onCreateWebpackConfig = ({ stage, rules, loaders, plugins, actions, getC
                     },
                 ],
             },
-        })
+        });
     }
 
-    const config = getConfig()
+    const config = getConfig();
     if (stage.startsWith("develop") && config.resolve) {
-        config.resolve.alias = { ...config.resolve.alias, "react-dom": "@hot-loader/react-dom" }
+        config.resolve.alias = { ...config.resolve.alias, "react-dom": "@hot-loader/react-dom" };
     }
-}
+};

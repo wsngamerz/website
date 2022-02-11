@@ -1,11 +1,11 @@
-import React from "react"
-import PropTypes from "prop-types"
-import { Helmet } from "react-helmet"
-import { useLocation } from "@reach/router"
-import { useStaticQuery, graphql } from "gatsby"
+import React from "react";
+import PropTypes from "prop-types";
+import { Helmet } from "react-helmet";
+import { useLocation } from "@reach/router";
+import { useStaticQuery, graphql } from "gatsby";
 
 const Meta = ({ title, description, image, post }) => {
-    const { pathname } = useLocation()
+    const { pathname } = useLocation();
     const data = useStaticQuery(graphql`
         query Meta {
             site {
@@ -21,15 +21,15 @@ const Meta = ({ title, description, image, post }) => {
                 }
             }
         }
-    `)
-    const siteMeta = data.site.siteMetadata
+    `);
+    const siteMeta = data.site.siteMetadata;
 
     const seo = {
         title: title || siteMeta.defaultTitle,
         description: description || siteMeta.defaultDescription,
         image: `${siteMeta.siteUrl}${image || siteMeta.defaultImage}`,
         url: `${siteMeta.siteUrl}${pathname}`,
-    }
+    };
 
     return (
         <Helmet title={seo.title} titleTemplate={siteMeta.titleTemplate}>
@@ -62,10 +62,10 @@ const Meta = ({ title, description, image, post }) => {
             <meta name="twitter:description" content={seo.description} />
             <meta name="twitter:image" content={seo.image} />
         </Helmet>
-    )
-}
+    );
+};
 
-export default Meta
+export default Meta;
 
 Meta.propTypes = {
     title: PropTypes.string,
@@ -78,11 +78,11 @@ Meta.propTypes = {
         category: PropTypes.string,
         tags: PropTypes.arrayOf(PropTypes.string),
     }),
-}
+};
 
 Meta.defaultProps = {
     title: null,
     description: null,
     image: null,
     post: null,
-}
+};

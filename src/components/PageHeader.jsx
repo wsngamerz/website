@@ -1,25 +1,25 @@
-import React, { Component } from "react"
+import React, { Component } from "react";
 
-import PropTypes from "prop-types"
-import Typewriter from "typewriter-effect"
-import Trianflify from "trianglify"
-import { Link } from "gatsby"
-import Img from "gatsby-image"
+import PropTypes from "prop-types";
+import Typewriter from "typewriter-effect";
+import Trianflify from "trianglify";
+import { Link } from "gatsby";
+import { GatsbyImage } from "gatsby-plugin-image";
 
-import "../scss/_pageHeader.scss"
+import "../scss/_pageHeader.scss";
 
 class PageHeader extends Component {
     constructor(props) {
-        super(props)
+        super(props);
 
         if (props.image == null) {
-            this.background = this.generateBackground()
+            this.background = this.generateBackground();
         }
     }
 
     generateBackground() {
-        const width = 1280
-        const height = 720
+        const width = 1280;
+        const height = 720;
 
         const colorPalette = [
             ["#81D4FA", "#0D47A1"],
@@ -40,7 +40,7 @@ class PageHeader extends Component {
             ["#FD6E6A", "#FFC600"],
             ["#3B2667", "#BC78EC"],
             ["#3C8CE7", "#00EAFF"],
-        ]
+        ];
 
         const patternSVGTree = Trianflify({
             width: width,
@@ -49,25 +49,25 @@ class PageHeader extends Component {
         }).toSVGTree({
             includeNamespace: true,
             coordinateDecimals: 1,
-        })
+        });
 
         // replace default attributes so we can make this responsive
-        delete patternSVGTree.attrs["height"]
-        delete patternSVGTree.attrs["width"]
-        patternSVGTree.attrs["viewBox"] = `0 0 ${width} ${height}`
-        patternSVGTree.attrs["preserveAspectRatio"] = "xMidYMid slice"
+        delete patternSVGTree.attrs["height"];
+        delete patternSVGTree.attrs["width"];
+        patternSVGTree.attrs["viewBox"] = `0 0 ${width} ${height}`;
+        patternSVGTree.attrs["preserveAspectRatio"] = "xMidYMid slice";
 
-        return { __html: patternSVGTree }
+        return { __html: patternSVGTree };
     }
 
     render() {
-        const { title, subtitle, typewriter, alternatives, big, buttons, image } = this.props
+        const { title, subtitle, typewriter, alternatives, big, buttons, image } = this.props;
 
         return (
             <header className={"pageheader" + (big ? " pageheader-big" : "")}>
                 {image ? (
                     <div className="pageheader-background">
-                        <Img className="pageheader-image" fluid={image} />
+                        <GatsbyImage className="pageheader-image" image={image} alt="" />
                     </div>
                 ) : (
                     <div className="pageheader-background" dangerouslySetInnerHTML={this.background}></div>
@@ -111,11 +111,11 @@ class PageHeader extends Component {
                     </div>
                 )}
             </header>
-        )
+        );
     }
 }
 
-export default PageHeader
+export default PageHeader;
 
 PageHeader.propTypes = {
     title: PropTypes.string,
@@ -124,7 +124,7 @@ PageHeader.propTypes = {
     alternatives: PropTypes.arrayOf(PropTypes.string),
     big: PropTypes.bool,
     buttons: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.string)),
-}
+};
 
 PageHeader.defaultProps = {
     title: null,
@@ -134,4 +134,4 @@ PageHeader.defaultProps = {
     big: false,
     buttons: [],
     image: null,
-}
+};

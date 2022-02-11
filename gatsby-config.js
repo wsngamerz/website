@@ -24,7 +24,8 @@ module.exports = {
         "gatsby-plugin-offline",
         "gatsby-plugin-react-helmet",
         "gatsby-plugin-sass",
-        "gatsby-remark-reading-time",
+        // "gatsby-remark-reading-time",
+        "gatsby-plugin-image",
         {
             resolve: "gatsby-transformer-sharp",
             options: {

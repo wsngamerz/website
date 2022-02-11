@@ -1,24 +1,24 @@
-import React from "react"
+import React from "react";
 
-import { MDXProvider } from "@mdx-js/react"
-import YouTube from "./YouTube"
-import CookieConsent from "react-cookie-consent"
+import { MDXProvider } from "@mdx-js/react";
+import YouTube from "./YouTube";
+import CookieConsent from "react-cookie-consent";
 
-import Navigation from "./Navigation"
-import Footer from "./Footer"
+import Navigation from "./Navigation";
+import Footer from "./Footer";
 
-import Advert from "./Advert"
-import Figure from "./Figure"
+import Advert from "./Advert";
+import Figure from "./Figure";
 
-import "../scss/main.scss"
+import "../scss/main.scss";
 
 const Table = ({ children }) => {
-    return <table className="table table-striped table-hover table-borderless">{children}</table>
-}
+    return <table className="table table-striped table-hover table-borderless">{children}</table>;
+};
 
 const TableHead = ({ children }) => {
-    return <thead className="thead-dark">{children}</thead>
-}
+    return <thead className="thead-dark">{children}</thead>;
+};
 
 const Layout = ({ children }) => {
     const shortcodes = {
@@ -27,7 +27,7 @@ const Layout = ({ children }) => {
         YouTube,
         table: Table,
         thead: TableHead,
-    }
+    };
 
     return (
         <MDXProvider components={shortcodes}>
@@ -44,7 +44,7 @@ const Layout = ({ children }) => {
                 agreeing to the use of cookies
             </CookieConsent>
         </MDXProvider>
-    )
-}
+    );
+};
 
-export default Layout
+export default Layout;

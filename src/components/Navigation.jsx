@@ -1,6 +1,6 @@
-import React from "react"
+import React from "react";
 
-import { Link } from "gatsby"
+import { Link } from "gatsby";
 
 const Navigation = () => {
     return (
@@ -55,7 +55,7 @@ const Navigation = () => {
                 </form>
             </div>
         </nav>
-    )
-}
+    );
+};
 
-export default Navigation
+export default Navigation;
