@@ -1,7 +1,47 @@
 module.exports = {
     siteMetadata: {
-        title: `William Neild`,
-        siteUrl: `https://williamneild.com`
+        title: "William Neild",
+        subtitle: "An aspiring software developer",
+        altSubtitles: [
+            "A technology enthusiast",
+            "A wannabe blogger",
+            "An undergraduate computer science student",
+            "A wabba dubba dubdub developer" // A GitHub Co-pilot suggestion
+        ],
+        siteUrl: `https://williamneild.com`,
+        description: "William Neild is an undergraduate computer science student based in Leeds.",
+        links: [
+            {
+                label: "Home",
+                url: "/"
+            },
+            {
+                label: "Blog",
+                url: "/blog"
+            },
+            {
+                label: "Projects",
+                url: "/projects"
+            },
+            {
+                label: "About",
+                url: "/about"
+            },
+            {
+                label: "Contact",
+                url: "/contact"
+            },
+            {
+                label: "Privacy Policy",
+                url: "/privacy-policy",
+                navbarHidden: true
+            },
+            {
+                label: "Terms",
+                url: "/terms",
+                navbarHidden: true
+            }
+        ]
     },
     plugins: [
         {
@@ -75,5 +115,6 @@ module.exports = {
                 // }
             }
         }
-    ]
+    ],
+    jsxRuntime: "automatic"
 };

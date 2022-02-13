@@ -1,4 +1,4 @@
-import PageHeader from "./PageHeader";
+import PageHeader from ".";
 
 import testImagePng from "../../../content/images/test/test.png";
 import testImageWebp from "../../../content/images/test/test.webp";
