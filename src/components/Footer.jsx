@@ -8,18 +8,18 @@ const Footer = () => {
             <div className="container-fluid">
                 <div className="row py-4">
                     <div className="col-12 col-md-10">
-                        <p className="text-light m-0 mb-2">© William Neild 2020</p>
+                        <p className="text-light m-0 mb-2">&copy; William Neild {new Date().getFullYear()}</p>
                         <p className="m-0">
-                            <Link className="text-light mr-2" to="/">
+                            <Link className="text-light me-2" to="/">
                                 Home
                             </Link>
-                            <Link className="text-light mr-2" to="/blog/">
+                            <Link className="text-light me-2" to="/blog/">
                                 Blog
                             </Link>
-                            <Link className="text-light mr-2" to="/projects/">
+                            <Link className="text-light me-2" to="/projects/">
                                 Projects
                             </Link>
-                            <Link className="text-light mr-2" to="/about/">
+                            <Link className="text-light me-2" to="/about/">
                                 About
                             </Link>
                             <Link className="text-light" to="/contact/">
@@ -27,10 +27,10 @@ const Footer = () => {
                             </Link>
                         </p>
                         <p>
-                            <Link className="text-light mr-2" to="/privacy-policy/">
+                            <Link className="text-light me-2" to="/privacy-policy/">
                                 Privacy Policy
                             </Link>
-                            <Link className="text-light mr-2" to="/terms/">
+                            <Link className="text-light me-2" to="/terms/">
                                 Terms
                             </Link>
                         </p>

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import PropTypes from "prop-types";
 import Typewriter from "typewriter-effect";
-import Trianflify from "trianglify";
+import Trianglify from "trianglify/dist/trianglify.bundle.js";
 import { Link } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 
@@ -42,7 +42,7 @@ class PageHeader extends Component {
             ["#3C8CE7", "#00EAFF"],
         ];
 
-        const patternSVGTree = Trianflify({
+        const patternSVGTree = Trianglify({
             width: width,
             height: height,
             xColors: colorPalette[~~(Math.random() * colorPalette.length)],
@@ -100,7 +100,7 @@ class PageHeader extends Component {
                                     )}
                                     <div>
                                         {buttons.map(button => (
-                                            <Link key={button[0]} to={button[1]} className="btn btn-primary mr-2">
+                                            <Link key={button[0]} to={button[1]} className="btn btn-primary me-2">
                                                 {button[0]}
                                             </Link>
                                         ))}

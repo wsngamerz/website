@@ -3,11 +3,7 @@ import React from "react";
 import { Link } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 
-import TimeAgo from "javascript-time-ago";
-import enGB from "javascript-time-ago/locale/en-GB";
-
-TimeAgo.addDefaultLocale(enGB);
-const timeAgo = new TimeAgo("en-GB");
+import timeAgo from "../timeAgo";
 
 const Card = ({ title, thumbnail, description, url, post }) => {
     return (

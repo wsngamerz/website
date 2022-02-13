@@ -2,11 +2,12 @@ module.exports = {
     siteMetadata: {
         title: "William Neild",
         titleTemplate: "%s · William Neild",
-        description: "An aspiring student who loves software development",
+        description: "An aspiring software developer",
         alternativeDescriptions: [
-            "A student who adores technology",
-            "A future blogging star (or so he thinks)",
-            "A passionate nerd",
+            "A technology enthusiast",
+            "A wannabe blogger",
+            "An undergraduate computer science student",
+            "A wabba dubba dubdub developer", // A GitHub Co-pilot suggestion
         ],
         author: "William Neild",
         siteUrl: "https://williamneild.com",
@@ -71,12 +72,12 @@ module.exports = {
                 ],
             },
         },
-        {
-            resolve: "gatsby-plugin-advanced-sitemap",
-            options: {
-                createLinkInHead: true,
-            },
-        },
+        // {
+        //     resolve: "gatsby-plugin-advanced-sitemap",
+        //     options: {
+        //         createLinkInHead: true,
+        //     },
+        // },
         {
             resolve: "gatsby-plugin-manifest",
             options: {

@@ -11,7 +11,7 @@ const SocialMediaItem = ({ text, icon, url }) => {
             target="_blank"
         >
             <Icon fontSize="32px" />
-            <span className="pl-3">{text}</span>
+            <span className="ps-3">{text}</span>
         </OutboundLink>
     );
 };

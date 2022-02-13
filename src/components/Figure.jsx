@@ -29,13 +29,12 @@ const Figure = ({ image, caption, attr, attrUrl }) => {
         return null;
     }
 
+    const figureImageData = figureImage.node.childImageSharp.gatsbyImageData;
+    console.log(figureImageData);
+
     return (
         <figure>
-            <GatsbyImage
-                className="figure-img img-fluid rounded"
-                image={figureImage.node.childImageSharp.gatsbyImageData}
-                alt=""
-            />
+            <GatsbyImage className="figure-img img-fluid rounded" image={figureImageData} alt="" />
             <figcaption className="figure-caption">
                 {caption && <p className="m-0 text-left">{caption}</p>}
                 {attr && (
