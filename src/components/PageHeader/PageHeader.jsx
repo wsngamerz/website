@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import Trianglify from "trianglify";
+import Trianglify from "trianglify/dist/trianglify.bundle.js";
 import Typewriter from "typewriter-effect";
 import { GatsbyImage } from "gatsby-plugin-image";
 
