@@ -1,5 +1,7 @@
 import styled from "styled-components";
+import PropTypes from "prop-types";
 import Trianglify from "trianglify";
+import Typewriter from "typewriter-effect";
 import { GatsbyImage } from "gatsby-plugin-image";
 
 const Header = styled.header`
@@ -7,6 +9,7 @@ const Header = styled.header`
     width: 100%;
     height: ${props => (props.big ? "100vh" : "50vh")};
     overflow: hidden;
+    position: relative;
 
     background-color: #333;
 `;
@@ -21,7 +24,48 @@ const BackgroundImage = styled.div`
     }
 `;
 
-const PageHeader = ({ big, image }) => {
+const HeaderBody = styled.div`
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: ${props => (props.big ? "100vh" : "50vh")};
+    color: ${props => props.theme.colors.text.white};
+`;
+
+const HeaderContent = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.5rem;
+
+    h1,
+    h2 {
+        margin: 0 0 0.5rem 0;
+    }
+
+    h1 {
+        font-size: 5.5rem;
+        font-weight: 300;
+
+        @media (max-width: 1200px) {
+            font-size: calc(1.675rem + 5.1vw);
+        }
+    }
+
+    h2 {
+        font-size: 2rem;
+        font-weight: 100;
+
+        @media (max-width: 1200px) {
+            font-size: calc(1.325rem + 0.9vw);
+        }
+    }
+`;
+
+const PageHeader = ({ big, image, title, subtitle, typewriter, altSubtitles }) => {
     const generateBackground = () => {
         const width = 1280;
         const height = 720;
@@ -68,9 +112,65 @@ const PageHeader = ({ big, image }) => {
     return (
         <Header big={big}>
             <BackgroundImage dangerouslySetInnerHTML={!image ? generateBackground() : undefined}>
-                {image && <GatsbyImage image={image} alt="" />}
+                {image && (
+                    <GatsbyImage
+                        style={{
+                            height: "100%",
+                            width: "100%"
+                        }}
+                        image={image}
+                        alt=""
+                    />
+                )}
             </BackgroundImage>
+            <HeaderBody big={big}>
+                <HeaderContent>
+                    <h1>{title}</h1>
+                    <h2>
+                        {typewriter ? (
+                            <Typewriter
+                                options={{
+                                    strings: [subtitle, ...altSubtitles],
+                                    autoStart: true,
+                                    loop: true,
+                                    delay: 50,
+                                    deleteSpeed: 20
+                                }}
+                            />
+                        ) : (
+                            subtitle
+                        )}
+                    </h2>
+                </HeaderContent>
+            </HeaderBody>
         </Header>
     );
 };
+
+PageHeader.defaultProps = {
+    big: false,
+    image: null,
+    title: "",
+    subtitle: "",
+    typewriter: false,
+    altSubtitles: []
+};
+
+PageHeader.propTypes = {
+    /** Whether the header is big or not */
+    big: PropTypes.bool,
+    /** The image to use as a background.
+     * This needs to be the response from a gatsbyImageData query.
+     * If this prop is not set, then a triangle background will automatically be generated instead. */
+    image: PropTypes.object,
+    /** The title of the header */
+    title: PropTypes.string,
+    /** The subtitle of the header */
+    subtitle: PropTypes.string,
+    /** Whether to use the typewriter effect or not */
+    typewriter: PropTypes.bool,
+    /** An array of subtitles to use if the typewriter effect is enabled */
+    altSubtitles: PropTypes.array
+};
+
 export default PageHeader;

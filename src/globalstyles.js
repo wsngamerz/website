@@ -10,6 +10,10 @@ const GlobalStyle = createGlobalStyle`
         font-family: 'Roboto', Arial, Helvetica, sans-serif;
         font-size: 16px;
     }
+
+    *, *:before, *:after {
+        box-sizing: border-box;
+    }
 `;
 
 export default GlobalStyle;
