@@ -4,7 +4,7 @@ import { Link } from "gatsby";
 
 const Navigation = () => {
     return (
-        <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark" style={{ zIndex: 500 }}>
             <div className="container-fluid">
                 <Link className="navbar-brand" to="/">
                     William Neild
@@ -30,6 +30,9 @@ const Navigation = () => {
                         </Link>
                         <Link className="nav-item nav-link" to="/projects/">
                             Projects
+                        </Link>
+                        <Link className="nav-item nav-link" to="/gallery/">
+                            Gallery
                         </Link>
                         <Link className="nav-item nav-link" to="/about/">
                             About

@@ -16,19 +16,21 @@ const ProjectsPage = ({ data }) => (
         <PageHeader title="Projects" />
         <div className="container my-4">
             <div className="row">
-                {data.projects.edges.map(edge => {
-                    const projects = edge.node.frontmatter;
-                    return (
-                        <div className="col-12 mb-4 py-0 px-3" key={projects.slug}>
-                            <Card
-                                title={projects.title}
-                                thumbnail={projects.thumbnail.childImageSharp.gatsbyImageData}
-                                description={projects.description}
-                                url={projects.slug}
-                            />
-                        </div>
-                    );
-                })}
+                {data.projects.edges
+                    .sort((a, b) => a.node.frontmatter.weight - b.node.frontmatter.weight)
+                    .map(edge => {
+                        const project = edge.node.frontmatter;
+                        return (
+                            <div className="col-sm-12 col-md-6 mb-4 py-0 px-3" key={project.slug}>
+                                <Card
+                                    title={project.title}
+                                    thumbnail={project.thumbnail.childImageSharp.gatsbyImageData}
+                                    description={project.description}
+                                    url={project.slug}
+                                />
+                            </div>
+                        );
+                    })}
             </div>
         </div>
     </Layout>
@@ -53,6 +55,7 @@ export const query = graphql`
                                 gatsbyImageData
                             }
                         }
+                        weight
                     }
                 }
             }

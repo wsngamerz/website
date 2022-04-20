@@ -49,18 +49,20 @@ const IndexPage = ({ data }) => {
                             <h3>Projects</h3>
                             <p>Here is a list of my projects, basically my portfolio.</p>
                             <div className="card-group py-1">
-                                {data.latestProjects.edges.map(edge => {
-                                    const project = edge.node.frontmatter;
-                                    return (
-                                        <Card
-                                            key={project.slug}
-                                            title={project.title}
-                                            thumbnail={project.thumbnail.childImageSharp.gatsbyImageData}
-                                            description={project.description}
-                                            url={project.slug}
-                                        />
-                                    );
-                                })}
+                                {data.latestProjects.edges
+                                    .sort((a, b) => a.node.frontmatter.weight - b.node.frontmatter.weight)
+                                    .map(edge => {
+                                        const project = edge.node.frontmatter;
+                                        return (
+                                            <Card
+                                                key={project.slug}
+                                                title={project.title}
+                                                thumbnail={project.thumbnail.childImageSharp.gatsbyImageData}
+                                                description={project.description}
+                                                url={project.slug}
+                                            />
+                                        );
+                                    })}
                             </div>
                         </div>
                     </div>
@@ -188,6 +190,7 @@ export const query = graphql`
                                 gatsbyImageData
                             }
                         }
+                        weight
                     }
                 }
             }

@@ -25,7 +25,6 @@ module.exports = {
         "gatsby-plugin-offline",
         "gatsby-plugin-react-helmet",
         "gatsby-plugin-sass",
-        // "gatsby-remark-reading-time",
         "gatsby-plugin-image",
         {
             resolve: "gatsby-transformer-sharp",
@@ -72,12 +71,6 @@ module.exports = {
                 ],
             },
         },
-        // {
-        //     resolve: "gatsby-plugin-advanced-sitemap",
-        //     options: {
-        //         createLinkInHead: true,
-        //     },
-        // },
         {
             resolve: "gatsby-plugin-manifest",
             options: {
@@ -95,6 +88,10 @@ module.exports = {
             options: {
                 trackingId: "UA-75997847-9",
             },
+        },
+        {
+            resolve: "gatsby-plugin-sitemap",
+            options: {},
         },
     ],
 };

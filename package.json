@@ -5,6 +5,7 @@
     "version": "0.1.0",
     "author": "William Neild",
     "dependencies": {
+        "@browniebroke/gatsby-image-gallery": "^7.0.6",
         "@hot-loader/react-dom": "^17.0.2",
         "@mdx-js/mdx": "^1.6.22",
         "@mdx-js/react": "^1.6.22",
@@ -21,6 +22,7 @@
         "gatsby-plugin-sass": "^5.7.0",
         "gatsby-plugin-sentry": "^1.0.1",
         "gatsby-plugin-sharp": "^4.7.0",
+        "gatsby-plugin-sitemap": "^5.12.1",
         "gatsby-remark-images": "^6.7.0",
         "gatsby-source-filesystem": "^4.7.0",
         "gatsby-transformer-sharp": "^4.7.0",
