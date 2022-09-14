@@ -13,8 +13,6 @@ module.exports = {
         siteUrl: "https://williamneild.com",
         image: "",
         socialMedia: {
-            twitterUrl: "https://twitter.com/wsngamerz",
-            twitterUsername: "wsngamerz",
             facebookUrl: "https://www.facebook.com/william.neild.2",
             githubUrl: "https://github.com/wsngamerz",
             instagramUrl: "https://www.instagram.com/wneild5",
