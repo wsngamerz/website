@@ -30,7 +30,7 @@ const Figure = ({ image, caption, attr, attrUrl }) => {
     }
 
     const figureImageData = figureImage.node.childImageSharp.gatsbyImageData;
-    console.log(figureImageData);
+    // console.log(figureImageData);
 
     return (
         <figure>
