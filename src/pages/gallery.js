@@ -14,7 +14,7 @@ const GalleryPage = ({ data }) => {
     return (
         <Layout>
             <Meta title="Gallery" description="A collection of my photos" />
-            <PageHeader title="Gallery" />
+            <PageHeader title="Gallery" subtitle="A collection of photos I have taken over the past few years" />
 
             <div className="container my-4">
                 <div className="row">

@@ -15,9 +15,9 @@ const Meta = ({ title, description, image, post }) => {
                     defaultDescription: description
                     siteUrl
                     defaultImage: image
-                    socialMedia {
-                        twitterUsername
-                    }
+                    # socialMedia {
+                    #     twitterUsername
+                    # }
                 }
             }
         }
@@ -57,7 +57,7 @@ const Meta = ({ title, description, image, post }) => {
             )}
 
             <meta name="twitter:card" content="summary_large_image" />
-            <meta name="twitter:creator" content={siteMeta.socialMedia.twitterUsername} />
+            {/* <meta name="twitter:creator" content={siteMeta.socialMedia.twitterUsername} /> */}
             <meta name="twitter:title" content={seo.title} />
             <meta name="twitter:description" content={seo.description} />
             <meta name="twitter:image" content={seo.image} />
