@@ -2,15 +2,13 @@ import React from "react";
 
 import { graphql } from "gatsby";
 
-import { MDXRenderer } from "gatsby-plugin-mdx";
-
 import Layout from "../components/Layout";
 import Meta from "../components/Meta";
 import PageHeader from "../components/PageHeader";
 
-export default function ProjectTemplate({ data }) {
-    const { mdx } = data;
-    const { frontmatter, body } = mdx;
+export default function ProjectTemplate({ data: { mdx }, children }) {
+    const { frontmatter } = mdx;
+
     return (
         <Layout>
             <Meta title={frontmatter.title} description={frontmatter.description} />
@@ -18,9 +16,7 @@ export default function ProjectTemplate({ data }) {
 
             <div className="container">
                 <div className="row">
-                    <div className="col-12 my-4">
-                        <MDXRenderer>{body}</MDXRenderer>
-                    </div>
+                    <div className="col-12 my-4">{children}</div>
                 </div>
             </div>
         </Layout>
@@ -28,9 +24,8 @@ export default function ProjectTemplate({ data }) {
 }
 
 export const pageQuery = graphql`
-    query($slug: String!) {
+    query ($slug: String!) {
         mdx(frontmatter: { slug: { eq: $slug } }) {
-            body
             frontmatter {
                 slug
                 title

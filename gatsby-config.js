@@ -1,3 +1,12 @@
+const wrapESMPlugin = name =>
+    function wrapESM(opts) {
+        return async (...args) => {
+            const mod = await import(name);
+            const plugin = mod.default(opts);
+            return plugin(...args);
+        };
+    };
+
 module.exports = {
     siteMetadata: {
         title: "William Neild",
@@ -45,6 +54,13 @@ module.exports = {
             },
         },
         {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                name: `pages`,
+                path: `${__dirname}/src/pages`,
+            },
+        },
+        {
             resolve: "gatsby-plugin-sentry",
             options: {
                 dsn: "https://a8e3a683c5f84b9cbd1928e1145c1dc5@o294554.ingest.sentry.io/5249583",
@@ -55,10 +71,6 @@ module.exports = {
         {
             resolve: "gatsby-plugin-mdx",
             options: {
-                defaultLayouts: {
-                    posts: require.resolve("./src/templates/blogTemplate.js"),
-                    projects: require.resolve("./src/templates/projectTemplate.js"),
-                },
                 gatsbyRemarkPlugins: [
                     {
                         resolve: "gatsby-remark-images",

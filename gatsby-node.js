@@ -3,6 +3,19 @@
  *
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
+const readingTime = require("reading-time");
+
+exports.onCreateNode = ({ node, actions }) => {
+    const { createNodeField } = actions;
+
+    if (node.internal.type === `Mdx`) {
+        createNodeField({
+            node,
+            name: `timeToRead`,
+            value: readingTime(node.body),
+        });
+    }
+};
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
     const { createPage } = actions;
@@ -18,6 +31,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
                             slug
                             publish
                         }
+                        internal {
+                            contentFilePath
+                        }
                     }
                 }
             }
@@ -31,18 +47,20 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     }
 
     result.data.allMdx.edges.forEach(({ node }) => {
-        if (node.frontmatter.publish !== false) {
-            let component = null;
+        if (node.frontmatter.publish !== false && node.frontmatter.slug !== null) {
+            let templateComponent = null;
+
+            console.log(JSON.stringify(node.frontmatter));
 
             if (node.frontmatter.slug.startsWith("/blog/")) {
-                component = blogPostTemplate;
+                templateComponent = blogPostTemplate;
             } else if (node.frontmatter.slug.startsWith("/projects/")) {
-                component = projectTemplate;
+                templateComponent = projectTemplate;
             }
 
             createPage({
                 path: node.frontmatter.slug,
-                component: component,
+                component: `${templateComponent}?__contentFilePath=${node.internal.contentFilePath}`,
                 context: {
                     // additional data can be passed via context
                     slug: node.frontmatter.slug,
@@ -64,10 +82,5 @@ exports.onCreateWebpackConfig = ({ stage, rules, loaders, plugins, actions, getC
                 ],
             },
         });
-    }
-
-    const config = getConfig();
-    if (stage.startsWith("develop") && config.resolve) {
-        config.resolve.alias = { ...config.resolve.alias, "react-dom": "@hot-loader/react-dom" };
     }
 };
