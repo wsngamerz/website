@@ -1,0 +1,104 @@
+{
+  "id": "ayxPs4afJjeaNE9aUpIv-",
+  "type": "AboutPage",
+  "title": "About",
+  "bio": [
+    {
+      "type": "paragraph",
+      "textAlign": "left",
+      "content": [
+        {
+          "type": "text",
+          "text": "Hey there, my name is William Neild and I am a software developer."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "textAlign": "left",
+      "content": [
+        {
+          "type": "text",
+          "text": "I first got into software development when I was in my early teens when I was introduced to the Raspberry Pi, A small single-board computer designed to teach children about the power of computing, and well, that seemed to work given that almost 8 years later, I am a second-year undergraduate student at the University of Leeds, studying Computer Science."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "textAlign": "left",
+      "content": [
+        {
+          "type": "text",
+          "text": "Throughout the past few years, I have worked on a large number of projects, including TapZ, LightningChat, Stepmania Server, and most recently, DataViewer. These projects although not specifically designed for the general public, were designed to not only be a side project to work on in my spare time, but to push myself to become a better software developer by learning new languages, libraries and professional programming techniques."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "textAlign": "left",
+      "content": [
+        {
+          "type": "text",
+          "text": "Although I have basic experience in a range of programming languages such as C, Python and C#, my prefered programming language of choice is JavaScript (with a sprinkle of TypeScript too). This is because I believe that the future of applications lies within the web browser, which funnily enough, uses JS, and it's also got a nice backend runtime. One language to run everywhere!"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "textAlign": "left",
+      "content": [
+        {
+          "type": "text",
+          "text": "Now, if that's not enough for you, then you can contact me "
+        },
+        {
+          "type": "text",
+          "text": "here",
+          "marks": [
+            {
+              "type": "link",
+              "attrs": {
+                "data-id": null,
+                "data-entry": null,
+                "href": "https://williamneild.com/contact",
+                "title": null
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", or you could even check out some of my public projects "
+        },
+        {
+          "type": "text",
+          "text": "here",
+          "marks": [
+            {
+              "type": "link",
+              "attrs": {
+                "data-id": null,
+                "data-entry": null,
+                "href": "https://williamneild.com/projects",
+                "title": null
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "textAlign": "left"
+    }
+  ],
+  "information": "gfasfgdxsgsdgdfgsdfg",
+  "alinea": {
+    "index": "a0",
+    "root": "pages"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "id": "Kz5kpc1S2pyLKp2vZV6-N",
+  "type": "HomePage",
+  "title": "William Neild",
+  "subtitles": [
+    {
+      "id": "HDgQ9QcljrPhUpn3rB0bp",
+      "index": "a0",
+      "type": "Subtitle",
+      "subtitle": "An aspiring software developer"
+    },
+    {
+      "id": "bYZXx2DagRpDtiVFkLUdp",
+      "index": "a1",
+      "type": "Subtitle",
+      "subtitle": "A wannabe blogger"
+    },
+    {
+      "id": "CgBZR45TwZt3YeXs0UIW3",
+      "index": "a2",
+      "type": "Subtitle",
+      "subtitle": "An undergraduate computer science student"
+    },
+    {
+      "id": "eqnTouiQklefvAQRGEb55",
+      "index": "a3",
+      "type": "Subtitle",
+      "subtitle": "A wabba dubba dubdub developer"
+    }
+  ],
+  "intro": [
+    {
+      "type": "heading",
+      "textAlign": "start",
+      "level": 3,
+      "content": [
+        {
+          "type": "text",
+          "text": "Hello and welcome to my website",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "textAlign": "start",
+      "content": [
+        {
+          "type": "text",
+          "text": "Here you will be able to view a wonderful selection of my projects and have a read through some of my blog posts where I will talk about a variety of topics including software development, recent technological advancements and possibly some of my own life stories (because people want to know about that)."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "textAlign": "start",
+      "content": [
+        {
+          "type": "text",
+          "text": "I hope that you enjoy your time here!"
+        }
+      ]
+    }
+  ],
+  "alinea": {
+    "index": "a1",
+    "root": "pages"
+  }
+}

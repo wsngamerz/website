@@ -1,0 +1,30 @@
+{
+  "id": "F-sSMQhCYvUT9TJ-CFlmJ",
+  "type": "Project",
+  "title": "LightningChat",
+  "coverImage": [
+    {
+      "id": "lQ7v6JuXZgUySFmhncn-L",
+      "index": "a0",
+      "type": "entry",
+      "entry": "phewk566VetZ_zjBFgmQb"
+    }
+  ],
+  "excerpt": [
+    {
+      "type": "paragraph",
+      "textAlign": "left",
+      "content": [
+        {
+          "type": "text",
+          "text": "LightningChat is a free, open-source, cross-platform and easy-to-use chat application prototype"
+        }
+      ]
+    }
+  ],
+  "content": [],
+  "ogImage": [],
+  "alinea": {
+    "index": "Zz"
+  }
+}
