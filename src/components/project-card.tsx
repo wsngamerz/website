@@ -11,7 +11,7 @@ type Props = {
 
 const ProjectCard = ({ name, excerpt, cover }: Props) => {
     return (
-        <div className="flex-1 block rounded-lg p-4 m-4 shadow-sm shadow-indigo-100">
+        <div className="block rounded-lg p-4 shadow-sm shadow-indigo-100 h-full">
             <img
                 alt={`Project cover art for ${name}`}
                 src={

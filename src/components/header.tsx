@@ -48,11 +48,9 @@ const Header = ({
                 {buttons && (
                     <div className="py-8">
                         {buttons.map((button) => (
-                            <Link href={button[1]} key={button[0]}>
-                                <a>
-                                    <Button>{button[0]}</Button>
-                                </a>
-                            </Link>
+                            <Button key={button[0]} to={button[1]}>
+                                {button[0]}
+                            </Button>
                         ))}
                     </div>
                 )}

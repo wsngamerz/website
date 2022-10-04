@@ -1,13 +1,13 @@
 {
-  "id": "F-sSMQhCYvUT9TJ-CFlmJ",
+  "id": "q4YbubHk8B0P7ZdNERHYs",
   "type": "Project",
-  "title": "LightningChat",
+  "title": "Stepmania Server",
   "coverImage": [
     {
-      "id": "lQ7v6JuXZgUySFmhncn-L",
+      "id": "6j10f57-7f8SFMJOVS6sm",
       "index": "a0",
       "type": "entry",
-      "entry": "phewk566VetZ_zjBFgmQb"
+      "entry": "aJuY3YhpugmO63KwyC2gq"
     }
   ],
   "excerpt": [
@@ -17,7 +17,7 @@
       "content": [
         {
           "type": "text",
-          "text": "LightningChat is a free, open-source, cross-platform and easy-to-use chat application prototype"
+          "text": "A Stepmania game server written in C#"
         }
       ]
     }
@@ -25,6 +25,6 @@
   "content": [],
   "ogImage": [],
   "alinea": {
-    "index": "Zz"
+    "index": "Zx"
   }
 }

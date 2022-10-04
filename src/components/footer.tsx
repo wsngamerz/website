@@ -12,6 +12,7 @@ const Footer = () => {
         { path: "/privacy-policy", name: "Privacy Policy" },
         { path: "/terms", name: "Terms" },
     ];
+
     const scrollToTop = () => {
         window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
     };

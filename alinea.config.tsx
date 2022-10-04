@@ -58,7 +58,7 @@ export const config = alinea.createConfig({
                     icon: IcRoundFeed,
                     contains: ["Post", "BlogPage"],
                 }),
-                projetcs: alinea.root("Projects", {
+                projects: alinea.root("Projects", {
                     icon: IcFaDiagramProject,
                     contains: ["Project", "ProjectsPage"],
                 }),

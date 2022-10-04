@@ -48,5 +48,13 @@ export function createApi(previewToken?: PreviewData) {
         async getTopProjects(num: number) {
             return await pages.whereType("Project").take(num);
         },
+        async getProjectSlugs() {
+            return pages.whereType("Project").select((page) => page.path);
+        },
+        async getProjectBySlug(slug: string) {
+            return pages
+                .whereType("Project")
+                .first((page) => page.path.is(slug));
+        },
     };
 }

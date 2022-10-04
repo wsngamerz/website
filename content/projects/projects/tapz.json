@@ -1,0 +1,125 @@
+{
+  "id": "l2f6IVDWgnCJDLQh6kBAM",
+  "type": "Project",
+  "title": "TapZ",
+  "coverImage": [
+    {
+      "id": "V-Uf4YZ9Q3atvExzyX8T1",
+      "index": "a0",
+      "type": "entry",
+      "entry": "9bY17ApTENlXg1U7rdW5T"
+    }
+  ],
+  "excerpt": [
+    {
+      "type": "paragraph",
+      "textAlign": "left",
+      "content": [
+        {
+          "type": "text",
+          "text": "TapZ is a small online incremental game that aims to be feature rich and replayable time after time"
+        }
+      ]
+    }
+  ],
+  "content": [
+    {
+      "type": "paragraph",
+      "textAlign": "start",
+      "content": [
+        {
+          "type": "text",
+          "text": "TapZ is a small online zombie incremental which intends to be feature rich and re-playable time after time."
+        }
+      ]
+    },
+    {
+      "id": "8PWKpZUrt9OPpoB6bOisF",
+      "type": "Alert",
+      "level": "success",
+      "alert": "TapZ is in development"
+    },
+    {
+      "type": "paragraph",
+      "textAlign": "start",
+      "content": [
+        {
+          "type": "text",
+          "text": "TapZ is currently in a redesign and rewrite stage, you can play whatever version that is uploaded here:"
+        }
+      ]
+    },
+    {
+      "id": "fbpKMVVFXAQe9kpWZELnI",
+      "type": "Button",
+      "link": [
+        {
+          "id": "k9fneXtpu1pel7jlHEY0l",
+          "index": "a0",
+          "type": "url",
+          "url": "https://tapz.williamneild.com",
+          "description": "Play TapZ now!",
+          "target": "_blank"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "textAlign": "start",
+      "content": [
+        {
+          "type": "text",
+          "text": "Read more about the redesign and rewrite "
+        },
+        {
+          "type": "text",
+          "text": "Here",
+          "marks": [
+            {
+              "type": "link",
+              "attrs": {
+                "data-id": null,
+                "data-entry": null,
+                "href": "https://williamneild.com/blog/the-future-of-tapz",
+                "title": null
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "textAlign": "start",
+      "content": [
+        {
+          "type": "text",
+          "text": "The source code is available on my GitHub "
+        },
+        {
+          "type": "text",
+          "text": "Here",
+          "marks": [
+            {
+              "type": "link",
+              "attrs": {
+                "data-id": null,
+                "data-entry": null,
+                "href": "https://github.com/wsngamerz/TapZ-Incremental",
+                "title": null
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    }
+  ],
+  "ogImage": [],
+  "alinea": {
+    "index": "a0"
+  }
+}

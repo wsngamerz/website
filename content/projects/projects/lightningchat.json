@@ -1,0 +1,235 @@
+{
+  "id": "F-sSMQhCYvUT9TJ-CFlmJ",
+  "type": "Project",
+  "title": "LightningChat",
+  "coverImage": [
+    {
+      "id": "lQ7v6JuXZgUySFmhncn-L",
+      "index": "a0",
+      "type": "entry",
+      "entry": "phewk566VetZ_zjBFgmQb"
+    }
+  ],
+  "excerpt": [
+    {
+      "type": "paragraph",
+      "textAlign": "left",
+      "content": [
+        {
+          "type": "text",
+          "text": "LightningChat is a free, open-source, cross-platform and easy-to-use chat application prototype"
+        }
+      ]
+    }
+  ],
+  "content": [
+    {
+      "type": "paragraph",
+      "textAlign": "start",
+      "content": [
+        {
+          "type": "text",
+          "text": "LightningChat is a free, open-source, cross-platform, and easy-to-use chat application prototype."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "textAlign": "start",
+      "content": [
+        {
+          "type": "text",
+          "text": "You can try out the version 0 of the application here: "
+        },
+        {
+          "type": "text",
+          "text": "LightningChat v0",
+          "marks": [
+            {
+              "type": "link",
+              "attrs": {
+                "data-id": null,
+                "data-entry": null,
+                "href": "https://lc.williamneild.com/",
+                "title": null
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "textAlign": "start",
+      "content": [
+        {
+          "type": "text",
+          "text": "You can also try out the in-dev version of the application here: "
+        },
+        {
+          "type": "text",
+          "text": "LightningChat DEV",
+          "marks": [
+            {
+              "type": "link",
+              "attrs": {
+                "data-id": null,
+                "data-entry": null,
+                "href": "https://dev.lc.williamneild.com/",
+                "title": null
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "textAlign": "start",
+      "content": [
+        {
+          "type": "text",
+          "text": "Note that the in-dev version will ",
+          "marks": [
+            {
+              "type": "italic"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "NOT",
+          "marks": [
+            {
+              "type": "bold"
+            },
+            {
+              "type": "italic"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " be stable, be fully functional and will not be updated regularly. It is mainly used as a demonstration of the application architecture and testing out some different workflows.",
+          "marks": [
+            {
+              "type": "italic"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "textAlign": "start",
+      "level": 2,
+      "content": [
+        {
+          "type": "text",
+          "text": "History",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "textAlign": "start",
+      "content": [
+        {
+          "type": "text",
+          "text": "LightningChat was originally developed when I was in my first year of college (high school for Americans) in 2019, due to the limitations of the college's internet, constantly blocking any form of social media or well known chat applications. So the only solution was to develop my own of course."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "textAlign": "start",
+      "content": [
+        {
+          "type": "text",
+          "text": "After laying dormant for over 2 years, I decided to test out some UI designing tools and the project I decided to develop a UI for was LightningChat."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "textAlign": "start",
+      "content": [
+        {
+          "type": "text",
+          "text": "Although the designs were never fully completed, I was able to get a good idea of what the application should look like and how it should work. Check out the DEV version linked above to see the new application look in action."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "textAlign": "start",
+      "level": 2,
+      "content": [
+        {
+          "type": "text",
+          "text": "Designs",
+          "marks": [
+            {
+              "type": "bold"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "textAlign": "start",
+      "content": [
+        {
+          "type": "text",
+          "text": "Login page:"
+        }
+      ]
+    },
+    {
+      "id": "7cN3xMPCuZSH_mLH7xE9D",
+      "type": "Image",
+      "image": [
+        {
+          "id": "jhILE4AbM4lfWjQagkl4U",
+          "index": "a0",
+          "type": "entry",
+          "entry": "mpmitj4rbccZvYTpY80mv"
+        }
+      ],
+      "alt": "Design for the login page"
+    },
+    {
+      "type": "paragraph",
+      "textAlign": "start",
+      "content": [
+        {
+          "type": "text",
+          "text": "Main page:"
+        }
+      ]
+    },
+    {
+      "id": "8oHd38pon7tYtdClorEeX",
+      "type": "Image",
+      "image": [
+        {
+          "id": "0pd6w_v0NEkgfJ6x6PuqG",
+          "index": "a0",
+          "type": "entry",
+          "entry": "5sQVti4kFkibY6-cu5o-6"
+        }
+      ],
+      "alt": "Design for the home screen page"
+    }
+  ],
+  "ogImage": [],
+  "alinea": {
+    "index": "Zz"
+  }
+}
