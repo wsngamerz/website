@@ -1,8 +1,9 @@
-import { TextNode } from "@alinea/core";
 import { GetStaticPropsContext } from "next";
 import ErrorPage from "next/error";
 import Head from "next/head";
 import { useRouter } from "next/router";
+import { TextNode } from "@alinea/core";
+import { DiscussionEmbed } from "disqus-react";
 
 import Container from "../../components/container";
 import DateFormatter from "../../components/date-formatter";
@@ -12,6 +13,7 @@ import RichTextStyled from "../../components/rich-text";
 import { createApi } from "../../lib/api";
 
 import type { Post as IPost } from "../../schema";
+import type { TextDoc } from "@alinea/core";
 
 type Props = {
     post: IPost;
@@ -61,16 +63,32 @@ export default function Post({ post, preview }: Props) {
                         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter leading-tight md:leading-none mb-6 text-center md:text-left">
                             {post.title}
                         </h1>
-                        <div className="flex gap-6 my-6 text-sm text-gray-700">
+                        <div className="flex gap-2 my-3 text-sm text-gray-700">
                             <p>
                                 By <span>{post.author.title}</span>
                             </p>
+                            <span>•</span>
                             <DateFormatter dateString={post.date} />
+                            <span>•</span>
                             <p>{words} words</p>
+                            <span>•</span>
                             <p>{mins} mins</p>
                         </div>
-                        <hr className="mb-4" />
+                        <hr className="mb-4 border-gray-300" />
                         <RichTextStyled content={post.content} />
+                    </div>
+                    <hr />
+                    <div className="p-8">
+                        <DiscussionEmbed
+                            shortname="wneild-blog"
+                            config={{
+                                url:
+                                    "https://williamneild.com/blog/" +
+                                    post.path,
+                                identifier: post.path,
+                                title: post.title,
+                            }}
+                        />
                     </div>
                 </article>
             </Container>

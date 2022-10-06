@@ -16,6 +16,11 @@ const RichTextStyled = ({ content }: Props) => {
             doc={content}
             p={<p className="py-2"></p>}
             a={<a className="text-cyan-500 underline" />}
+            h1={<h1 className="mt-4 font-bold text-3xl" />}
+            h2={<h2 className="mt-4 font-bold text-2xl" />}
+            h3={<h3 className="mt-4 font-bold text-xl" />}
+            ul={<ul className="list-disc list-inside" />}
+            li={<li className="[&_p]:inline-block" />}
             Image={Image}
             Alert={Alert}
             Button={Button}

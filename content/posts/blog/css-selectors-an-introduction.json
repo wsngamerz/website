@@ -49,12 +49,7 @@
       "content": [
         {
           "type": "text",
-          "text": "What are selectors?",
-          "marks": [
-            {
-              "type": "bold"
-            }
-          ]
+          "text": "What are selectors?"
         }
       ]
     },
@@ -103,15 +98,65 @@
       ]
     },
     {
-      "type": "paragraph",
-      "textAlign": "justify",
+      "type": "bulletList",
       "content": [
         {
-          "type": "text",
-          "text": "Insert table here",
-          "marks": [
+          "type": "listItem",
+          "content": [
             {
-              "type": "italic"
+              "type": "paragraph",
+              "textAlign": "left",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Wildcard"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "textAlign": "left",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Element"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "textAlign": "left",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Class"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "textAlign": "left",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "ID"
+                }
+              ]
             }
           ]
         }
@@ -124,12 +169,7 @@
       "content": [
         {
           "type": "text",
-          "text": "Wildcard selector",
-          "marks": [
-            {
-              "type": "bold"
-            }
-          ]
+          "text": "Wildcard selector"
         }
       ]
     },
@@ -184,12 +224,7 @@
       "content": [
         {
           "type": "text",
-          "text": "Element Selector",
-          "marks": [
-            {
-              "type": "bold"
-            }
-          ]
+          "text": "Element Selector"
         }
       ]
     },
@@ -244,12 +279,7 @@
       "content": [
         {
           "type": "text",
-          "text": "Class Selector",
-          "marks": [
-            {
-              "type": "bold"
-            }
-          ]
+          "text": "Class Selector"
         }
       ]
     },
@@ -318,12 +348,7 @@
       "content": [
         {
           "type": "text",
-          "text": "ID Selector",
-          "marks": [
-            {
-              "type": "bold"
-            }
-          ]
+          "text": "ID Selector"
         }
       ]
     },
@@ -382,12 +407,7 @@
       "content": [
         {
           "type": "text",
-          "text": "Conclusion",
-          "marks": [
-            {
-              "type": "bold"
-            }
-          ]
+          "text": "Conclusion"
         }
       ]
     },
