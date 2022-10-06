@@ -27,17 +27,20 @@ export default function Post({ post, preview }: Props) {
     }
     const title = `${post.title}`;
 
-    // count words using a rudimentory method
-    let words = 0;
-    post.content.forEach((textNode: TextNode) => {
-        if (TextNode.isText(textNode)) {
-            words += textNode.text.split(" ").length;
-        } else if (textNode.content) {
-            textNode.content.forEach((tn) => {
-                words += tn.text.split(" ").length;
-            });
-        }
-    });
+    const getWords = (textDoc: TextDoc): number => {
+        return textDoc.reduce((sum: number, node: TextNode) => {
+            if (TextNode.isText(node)) {
+                return sum + node.text.split(" ").length;
+            } else if (TextNode.isElement(node) && node.content) {
+                return sum + getWords(node.content);
+            } else {
+                return sum;
+            }
+        }, 0);
+    };
+
+    // count words
+    let words = getWords(post.content);
 
     // estimate reading time from an average of 200wpm
     let mins = Math.round(words / 200);
