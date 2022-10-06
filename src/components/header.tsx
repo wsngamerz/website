@@ -24,7 +24,7 @@ const Header = ({
         <header
             className={cx(
                 "flex justify-center items-center bg-gray-100",
-                big ? "h-screen" : "h-[40vh]"
+                big ? "h-[75vh]" : "h-[30vh] min-h-[14rem]"
             )}
         >
             <div className="w-11/12 md:w-10/12 lg:w-9/12">

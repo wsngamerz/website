@@ -25,7 +25,7 @@ const Card = ({ name, excerpt, cover, to }: Props) => {
 
     return (
         <Wrapper to={to}>
-            <div className="block rounded-lg p-4 shadow-sm shadow-indigo-100 h-full">
+            <div className="block rounded-lg p-4 shadow-md shadow-gray-300 h-full bg-white">
                 <img
                     alt={`Project cover art for ${name}`}
                     src={
@@ -33,7 +33,7 @@ const Card = ({ name, excerpt, cover, to }: Props) => {
                             ? `/assets/${cover.src}`
                             : "https://via.placeholder.com/1200x400"
                     }
-                    className="rounded-md object-cover"
+                    className="rounded-md object-cover shadow-sm shadow-gray-200"
                 />
 
                 <div className="mt-2">

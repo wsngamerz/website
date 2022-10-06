@@ -18,7 +18,7 @@ const Footer = () => {
     };
 
     return (
-        <footer className="bg-gray-100">
+        <footer className="bg-gray-100 shadow-inner shadow-gray-200">
             <div className="relative mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8 lg:pt-24">
                 {/* Scroll to top button */}
                 <div className="absolute top-4 right-4 sm:top-6 sm:right-6 lg:top-8 lg:right-8">

@@ -20,6 +20,7 @@ const RichTextStyled = ({ content }: Props) => {
             h2={<h2 className="mt-4 font-bold text-2xl" />}
             h3={<h3 className="mt-4 font-bold text-xl" />}
             ul={<ul className="list-disc list-inside" />}
+            // the following weirdness ↓↓ fixes an issue with paragraphs inside list items being on a newline
             li={<li className="[&_p]:inline-block" />}
             Image={Image}
             Alert={Alert}

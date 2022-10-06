@@ -14,7 +14,7 @@ const Navigation = () => {
     // Modified from: https://www.hyperui.dev/components/marketing/navigations
 
     return (
-        <nav className="shadow-sm">
+        <nav className="shadow-sm shadow-gray-200">
             <div className="mx-auto flex h-16 max-w-screen-xl items-center justify-between px-4">
                 <div className="flex items-center gap-4">
                     {/* Brand name */}
