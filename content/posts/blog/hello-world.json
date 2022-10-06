@@ -3,7 +3,14 @@
   "type": "Post",
   "title": "Hello World",
   "date": "2022-10-03",
-  "coverImage": [],
+  "coverImage": [
+    {
+      "id": "5kORL_SB7TbsjJI6RgmuJ",
+      "index": "a0",
+      "type": "entry",
+      "entry": "V7LTq3k1XIUCtcuAJO9GP"
+    }
+  ],
   "author": [
     {
       "id": "HPVfV47U0XfvYw9VrakzD",

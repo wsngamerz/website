@@ -2,7 +2,14 @@
   "id": "3Hv7eFTfJaymXH4SZgOvk",
   "type": "Project",
   "title": "DataViewer",
-  "coverImage": [],
+  "coverImage": [
+    {
+      "id": "NYhaGonPYNj_Bp5QPCrNz",
+      "index": "a0",
+      "type": "entry",
+      "entry": "tNYiDN8WswymNj5tK_nVl"
+    }
+  ],
   "excerpt": [
     {
       "type": "paragraph",

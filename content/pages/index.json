@@ -36,12 +36,7 @@
       "content": [
         {
           "type": "text",
-          "text": "Hello and welcome to my website",
-          "marks": [
-            {
-              "type": "bold"
-            }
-          ]
+          "text": "Hello and welcome to my website"
         }
       ]
     },
