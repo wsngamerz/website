@@ -1,6 +1,5 @@
-import Link from "next/link";
+import cx from "classnames";
 import Typewriter from "typewriter-effect";
-import cn from "classnames";
 
 import Button from "./button";
 
@@ -23,7 +22,7 @@ const Header = ({
 }: Props) => {
     return (
         <header
-            className={cn(
+            className={cx(
                 "flex justify-center items-center bg-gray-100",
                 big ? "h-screen" : "h-[40vh]"
             )}

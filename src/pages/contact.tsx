@@ -1,11 +1,13 @@
 import Head from "next/head";
-import { RichText } from "@alinea/ui";
 
 import Container from "../components/container";
 import Layout from "../components/layout";
-import { createApi } from "../lib/api";
-import { ContactPage } from "../schema";
 import Header from "../components/header";
+import RichTextStyled from "../components/rich-text";
+
+import { createApi } from "../lib/api";
+
+import type { ContactPage } from "../schema";
 
 type Props = {
     contact: ContactPage;
@@ -21,11 +23,7 @@ export default function Contact({ contact }: Props) {
                 <Header title={contact.title} />
                 <Container>
                     <div className="flex flex-wrap">
-                        <RichText
-                            doc={contact.content}
-                            p={<p className="mb-4" />}
-                            a={<a className="text-cyan-500 underline" />}
-                        />
+                        <RichTextStyled content={contact.content} />
                     </div>
                 </Container>
             </Layout>

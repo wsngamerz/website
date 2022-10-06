@@ -3,8 +3,10 @@ import Head from "next/head";
 import Container from "../components/container";
 import Header from "../components/header";
 import Layout from "../components/layout";
+
 import { createApi } from "../lib/api";
-import { ProjectsPage } from "../schema";
+
+import type { ProjectsPage } from "../schema";
 
 type Props = {
     projects: ProjectsPage;

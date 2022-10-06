@@ -1,5 +1,7 @@
-import { initPages } from "@alinea/content/main/pages.js";
 import { PreviewData } from "next";
+
+import { initPages } from "@alinea/content/main/pages.js";
+import { Post } from "@alinea/content/main";
 
 export function createApi(previewToken?: PreviewData) {
     const pages = initPages(previewToken as string);
@@ -44,6 +46,12 @@ export function createApi(previewToken?: PreviewData) {
                 coverImage: page.coverImage,
                 excerpt: page.excerpt,
             }));
+        },
+        async getRecentPosts(num: number) {
+            return await pages
+                .whereType("Post")
+                .orderBy(Post.date.desc())
+                .take(num);
         },
         async getTopProjects(num: number) {
             return await pages.whereType("Project").take(num);

@@ -1,18 +1,14 @@
-import { RichText } from "@alinea/ui";
 import { GetStaticPropsContext } from "next";
 import ErrorPage from "next/error";
 import Head from "next/head";
 import { useRouter } from "next/router";
 
-import { createApi } from "../../lib/api";
-
 import Container from "../../components/container";
 import Header from "../../components/header";
 import Layout from "../../components/layout";
+import RichTextStyled from "../../components/rich-text";
 
-import Alert from "../../components/blocks/alert";
-import Button from "../../components/blocks/button";
-import Image from "../../components/blocks/image";
+import { createApi } from "../../lib/api";
 
 import type { Project as IProject } from "../../schema";
 
@@ -43,12 +39,7 @@ export default function Post({ project, preview }: Props) {
                                 content={project.ogImage?.src}
                             />
                         </Head>
-                        <RichText
-                            doc={project.content}
-                            Image={Image}
-                            Alert={Alert}
-                            Button={Button}
-                        />
+                        <RichTextStyled content={project.content} />
                     </>
                 )}
             </Container>

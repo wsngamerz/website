@@ -1,4 +1,5 @@
 import Head from "next/head";
+
 import { SITE_DESC, HOME_OG_IMAGE_URL } from "../lib/constants";
 
 const Meta = () => {
