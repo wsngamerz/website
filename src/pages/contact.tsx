@@ -7,10 +7,10 @@ import RichTextStyled from "../components/rich-text";
 
 import { createApi } from "../lib/api";
 
-import type { ContactPage } from "../schema";
+import type { Page } from "@alinea/content";
 
 type Props = {
-    contact: ContactPage;
+    contact: Page.ContactPage;
 };
 
 export default function Contact({ contact }: Props) {

@@ -7,10 +7,10 @@ import RichTextStyled from "../components/rich-text";
 
 import { createApi } from "../lib/api";
 
-import type { AboutPage } from "../schema";
+import type { Page } from "@alinea/content";
 
 type Props = {
-    about: AboutPage;
+    about: Page.AboutPage;
 };
 
 export default function About({ about }: Props) {

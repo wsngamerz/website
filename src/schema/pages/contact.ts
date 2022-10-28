@@ -5,5 +5,3 @@ export const ContactPage = alinea.type("Contact Page", {
     path: alinea.path("Path", { width: 0.5, hidden: true }),
     content: alinea.richText("content"),
 });
-
-export type ContactPage = alinea.infer<typeof ContactPage>;

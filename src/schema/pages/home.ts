@@ -12,5 +12,3 @@ export const HomePage = alinea.type("Home Page", {
     }),
     intro: alinea.richText("Introduction"),
 });
-
-export type HomePage = alinea.infer<typeof HomePage>;

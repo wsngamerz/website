@@ -5,9 +5,9 @@
   "date": "2020-05-12",
   "coverImage": [
     {
-      "id": "8KyLPs69zbWYEwThXmMJK",
+      "id": "SiavmeI9l5a_8wksPbiOZ",
       "index": "a0",
-      "type": "entry",
+      "type": "image",
       "entry": "hgAUWeVdOVwrmyCjnchzy"
     }
   ],
@@ -68,9 +68,9 @@
       "type": "Image",
       "image": [
         {
-          "id": "JWo1SW4uYk7xb14UiqIrj",
+          "id": "1DBROT_VThRXQOUcQkaSC",
           "index": "a0",
-          "type": "entry",
+          "type": "image",
           "entry": "C4UTggWL9jUzRp3VdcvIU"
         }
       ],
@@ -188,9 +188,9 @@
       "type": "Image",
       "image": [
         {
-          "id": "7eYeIJ1kJha1GwDVeO2GI",
+          "id": "aVmEa7FiujrP0rhwleyME",
           "index": "a0",
-          "type": "entry",
+          "type": "image",
           "entry": "1Lvbe5F1PEJCKrpOwWBUa"
         }
       ],
@@ -243,9 +243,9 @@
       "type": "Image",
       "image": [
         {
-          "id": "ByZiP6dk0ch0EMgh88YwL",
+          "id": "Q-Z2AjR6IpNtEh33vVVlA",
           "index": "a0",
-          "type": "entry",
+          "type": "image",
           "entry": "UDyV450HqQzuE02qQz-8t"
         }
       ],
@@ -298,9 +298,9 @@
       "type": "Image",
       "image": [
         {
-          "id": "q4dqXt6rdJBUiOp_4DlZy",
+          "id": "znnEgz3V4ZZ-R4TB4pfF7",
           "index": "a0",
-          "type": "entry",
+          "type": "image",
           "entry": "mlE_x7zm4TLlkbVYBK3AB"
         }
       ],
@@ -322,9 +322,9 @@
       "type": "Image",
       "image": [
         {
-          "id": "llRf8JmLRIpY3Gkp1e2AX",
+          "id": "ru9h_K5fSDMpcN03jIHUv",
           "index": "a0",
-          "type": "entry",
+          "type": "image",
           "entry": "c0RY5w-ethOQ3-UdFn6LP"
         }
       ],
@@ -367,9 +367,9 @@
       "type": "Image",
       "image": [
         {
-          "id": "YJdYA0yVFA4-VLo7vKfJv",
+          "id": "mx2sBk5yZvi4FhZCCgshG",
           "index": "a0",
-          "type": "entry",
+          "type": "image",
           "entry": "J30N6ES6jKAjnMsuqYBHP"
         }
       ],
@@ -391,9 +391,9 @@
       "type": "Image",
       "image": [
         {
-          "id": "X1R8RJuUfOS7E8490eoa2",
+          "id": "m4OxDYnRSRMwLeV9U2OvW",
           "index": "a0",
-          "type": "entry",
+          "type": "image",
           "entry": "1n1saca1b_OZPL7Y2_qXn"
         }
       ],
@@ -433,6 +433,8 @@
     }
   ],
   "ogImage": [],
+  "words": 593,
+  "reading_time": 3,
   "alinea": {
     "index": "Zz"
   }

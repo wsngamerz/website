@@ -38,12 +38,12 @@ export const config = alinea.createConfig({
         dashboardUrl: "/admin.html",
         handlerUrl: "/api/cms",
     },
+    schema,
     backend: createCloudBackend(),
     workspaces: {
         main: alinea.workspace("Main", {
             source: "./content",
             mediaDir: "./public/assets",
-            schema,
             roots: {
                 pages: alinea.root("Pages", {
                     icon: IcRoundInsertDriveFile,

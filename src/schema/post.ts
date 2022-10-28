@@ -1,5 +1,5 @@
-import { Entry } from "@alinea/core";
 import alinea from "alinea";
+import { Entry } from "@alinea/core";
 
 import { AlertSchema } from "../components/blocks/alert";
 import { ButtonSchema } from "../components/blocks/button";
@@ -25,11 +25,11 @@ export const Post = alinea.type(
                     Button: ButtonSchema,
                 }),
             }),
+            words: alinea.number("Words", { width: 0.5 }),
+            reading_time: alinea.number("Reading time", { width: 0.5 }),
         }),
         alinea.tab("Metadata", {
             ogImage: alinea.image("OG Image"),
         })
     )
 );
-
-export type Post = alinea.infer<typeof Post>;

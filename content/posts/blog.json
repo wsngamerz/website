@@ -2,6 +2,14 @@
   "id": "31ZUqCflu6RYl_vHe6WPy",
   "type": "BlogPage",
   "title": "Blog",
+  "featuredPost": [
+    {
+      "id": "tOIkIyvLf1jIWPbksJ9n4",
+      "index": "a0",
+      "type": "entry",
+      "entry": "h6wsgfaDCpUAM4y_V1tl7"
+    }
+  ],
   "alinea": {
     "index": "a0",
     "root": "posts"

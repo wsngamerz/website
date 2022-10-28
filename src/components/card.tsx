@@ -1,18 +1,22 @@
 import Link from "next/link";
-import { RichText } from "@alinea/ui";
-import { Fragment } from "react";
 
+import DateFormatter from "./date-formatter";
+import RichTextStyled from "./rich-text";
+
+import type { ImageReference } from "@alinea/picker.entry";
 import type { TextDoc } from "alinea";
-import type { LinkData } from "@alinea/input.link";
 
 type Props = {
     name: string;
     excerpt: TextDoc;
-    cover?: LinkData.Image;
+    cover?: ImageReference;
     to?: string;
+    date?: Date;
+    words?: number;
+    mins?: number;
 };
 
-const LinkWrapper = ({ children, to }) => {
+const LinkButton = ({ children, to }) => {
     return (
         <Link href={to}>
             <a>{children}</a>
@@ -20,8 +24,12 @@ const LinkWrapper = ({ children, to }) => {
     );
 };
 
-const Card = ({ name, excerpt, cover, to }: Props) => {
-    const Wrapper = to !== undefined ? LinkWrapper : Fragment;
+const EmptyDiv = ({ children, to }) => {
+    return <div>{children}</div>;
+};
+
+const Card = ({ name, excerpt, cover, to, date, words, mins }: Props) => {
+    const Wrapper = to !== undefined ? LinkButton : EmptyDiv;
 
     return (
         <Wrapper to={to}>
@@ -38,10 +46,18 @@ const Card = ({ name, excerpt, cover, to }: Props) => {
 
                 <div className="mt-2">
                     <span className="font-medium">{name}</span>
-                    <RichText
-                        doc={excerpt}
-                        p={<p className="mt-2 text-sm text-gray-500"></p>}
-                    />
+                    <RichTextStyled content={excerpt} />
+                    {(date || words || mins) && (
+                        <div className="flex gap-2 text-sm text-gray-600">
+                            <DateFormatter date={date} />
+                            <p>&#x2022;</p>
+                            <p>{words} words</p>
+                            <p>&#x2022;</p>
+                            <p>
+                                {mins} min{mins != 1 && "s"}
+                            </p>
+                        </div>
+                    )}
                 </div>
             </div>
         </Wrapper>

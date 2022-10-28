@@ -11,7 +11,7 @@
     "dependencies": {
         "@alinea/content": "link:.alinea",
         "@tailwindcss/forms": "^0.5.3",
-        "alinea": "latest",
+        "alinea": "^0.3.1",
         "classnames": "^2.3.1",
         "date-fns": "^2.28.0",
         "disqus-react": "^1.1.3",

@@ -1,9 +1,8 @@
+import { DiscussionEmbed } from "disqus-react";
 import { GetStaticPropsContext } from "next";
+import { useRouter } from "next/router";
 import ErrorPage from "next/error";
 import Head from "next/head";
-import { useRouter } from "next/router";
-import { TextNode } from "@alinea/core";
-import { DiscussionEmbed } from "disqus-react";
 
 import Container from "../../components/container";
 import DateFormatter from "../../components/date-formatter";
@@ -12,11 +11,10 @@ import RichTextStyled from "../../components/rich-text";
 
 import { createApi } from "../../lib/api";
 
-import type { Post as IPost } from "../../schema";
-import type { TextDoc } from "@alinea/core";
+import type { Page } from "@alinea/content";
 
 type Props = {
-    post: IPost;
+    post: Page.Post;
     preview?: boolean;
 };
 
@@ -26,24 +24,6 @@ export default function Post({ post, preview }: Props) {
         return <ErrorPage statusCode={404} />;
     }
     const title = `${post.title}`;
-
-    const getWords = (textDoc: TextDoc): number => {
-        return textDoc.reduce((sum: number, node: TextNode) => {
-            if (TextNode.isText(node)) {
-                return sum + node.text.split(" ").length;
-            } else if (TextNode.isElement(node) && node.content) {
-                return sum + getWords(node.content);
-            } else {
-                return sum;
-            }
-        }, 0);
-    };
-
-    // count words
-    let words = getWords(post.content);
-
-    // estimate reading time from an average of 200wpm
-    let mins = Math.round(words / 200);
 
     return (
         <Layout preview={preview} bgc={"bg-gray-100"}>
@@ -68,14 +48,14 @@ export default function Post({ post, preview }: Props) {
                         </h1>
                         <div className="flex gap-2 my-3 text-sm text-gray-700">
                             <p>
-                                By <span>{post.author.title}</span>
+                                By <span>{post.author?.title}</span>
                             </p>
                             <span>•</span>
                             <DateFormatter dateString={post.date} />
                             <span>•</span>
-                            <p>{words} words</p>
+                            <p>{post.words} words</p>
                             <span>•</span>
-                            <p>{mins} mins</p>
+                            <p>{post.reading_time} mins</p>
                         </div>
                         <hr className="mb-4 border-gray-300" />
                         <RichTextStyled content={post.content} />

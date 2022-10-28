@@ -4,9 +4,9 @@
   "title": "LightningChat",
   "coverImage": [
     {
-      "id": "lQ7v6JuXZgUySFmhncn-L",
+      "id": "isjKeqzJmZdS2lkC5rbkd",
       "index": "a0",
-      "type": "entry",
+      "type": "image",
       "entry": "phewk566VetZ_zjBFgmQb"
     }
   ],
@@ -101,10 +101,10 @@
           "text": "NOT",
           "marks": [
             {
-              "type": "bold"
+              "type": "italic"
             },
             {
-              "type": "italic"
+              "type": "bold"
             }
           ]
         },
@@ -196,9 +196,9 @@
       "type": "Image",
       "image": [
         {
-          "id": "jhILE4AbM4lfWjQagkl4U",
+          "id": "wpcZ8JALhXSiy7fHU4BwT",
           "index": "a0",
-          "type": "entry",
+          "type": "image",
           "entry": "mpmitj4rbccZvYTpY80mv"
         }
       ],
@@ -219,9 +219,9 @@
       "type": "Image",
       "image": [
         {
-          "id": "0pd6w_v0NEkgfJ6x6PuqG",
+          "id": "eMPNwx9hguPaE7KJtAQ7r",
           "index": "a0",
-          "type": "entry",
+          "type": "image",
           "entry": "5sQVti4kFkibY6-cu5o-6"
         }
       ],

@@ -9,5 +9,3 @@ export const ProjectsPage = alinea
         isContainer: true,
         contains: ["Project"],
     });
-
-export type ProjectsPage = alinea.infer<typeof ProjectsPage>;

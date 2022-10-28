@@ -1,7 +1,8 @@
 import { PreviewData } from "next";
 
-import { initPages } from "@alinea/content/main/pages.js";
-import { Post } from "@alinea/content/main";
+import { initPages } from "@alinea/content/pages";
+
+import { getReadingMins, getWords } from "./utils";
 
 export function createApi(previewToken?: PreviewData) {
     const pages = initPages(previewToken as string);
@@ -32,25 +33,29 @@ export function createApi(previewToken?: PreviewData) {
             }
         },
         async getPostSlugs() {
-            return pages.whereType("Post").select((page) => page.path);
+            return pages.whereType("Post").select((post) => post.path);
         },
         async getPostBySlug(slug: string) {
-            return pages.whereType("Post").first((page) => page.path.is(slug));
+            return pages.whereType("Post").first((post) => post.path.is(slug));
         },
         async getAllPosts() {
-            return pages.whereType("Post").select((page) => ({
-                title: page.title,
-                date: page.date,
-                path: page.path,
-                author: page.author,
-                coverImage: page.coverImage,
-                excerpt: page.excerpt,
-            }));
+            return pages.whereType("Post").select((post) => {
+                return {
+                    title: post.title,
+                    date: post.date,
+                    path: post.path,
+                    author: post.author,
+                    coverImage: post.coverImage,
+                    excerpt: post.excerpt,
+                    words: post.words,
+                    reading_time: post.reading_time,
+                };
+            });
         },
         async getRecentPosts(num: number) {
             return await pages
                 .whereType("Post")
-                .orderBy(Post.date.desc())
+                .orderBy((post) => [post.date.desc()])
                 .take(num);
         },
         async getTopProjects(num: number) {

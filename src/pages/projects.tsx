@@ -6,10 +6,10 @@ import Layout from "../components/layout";
 
 import { createApi } from "../lib/api";
 
-import type { ProjectsPage } from "../schema";
+import type { Page } from "@alinea/content";
 
 type Props = {
-    projects: ProjectsPage;
+    projects: Page.ProjectsPage;
 };
 
 export default function Blog({ projects }: Props) {

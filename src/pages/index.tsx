@@ -1,19 +1,19 @@
 import Head from "next/head";
 
+import Button from "../components/button";
+import Card from "../components/card";
 import Header from "../components/header";
 import Layout from "../components/layout";
-import Card from "../components/card";
-import Button from "../components/button";
 import RichTextStyled from "../components/rich-text";
 
 import { createApi } from "../lib/api";
 
-import type { Post, HomePage, Project } from "../schema";
+import type { Page } from "@alinea/content";
 
 type Props = {
-    page: HomePage;
-    recentPosts: Post[];
-    topProjects: Project[];
+    page: Page.HomePage;
+    recentPosts: Page.Post[];
+    topProjects: Page.Project[];
 };
 
 export default function Index({ page, recentPosts, topProjects }: Props) {
@@ -79,12 +79,15 @@ export default function Index({ page, recentPosts, topProjects }: Props) {
                                     name={post.title}
                                     excerpt={post.excerpt}
                                     cover={post.coverImage}
+                                    date={new Date(post.date)}
+                                    words={post.words}
+                                    mins={post.reading_time}
                                 />
                             ))}
                         </div>
 
                         <div className="flex justify-center py-4">
-                            <Button to="/posts" wide>
+                            <Button to="/blog" wide>
                                 More Posts
                             </Button>
                         </div>

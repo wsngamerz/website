@@ -1,7 +1,7 @@
 import { GetStaticPropsContext } from "next";
+import { useRouter } from "next/router";
 import ErrorPage from "next/error";
 import Head from "next/head";
-import { useRouter } from "next/router";
 
 import Container from "../../components/container";
 import Header from "../../components/header";
@@ -10,10 +10,10 @@ import RichTextStyled from "../../components/rich-text";
 
 import { createApi } from "../../lib/api";
 
-import type { Project as IProject } from "../../schema";
+import type { Page } from "@alinea/content";
 
 type Props = {
-    project: IProject;
+    project: Page.Project;
     preview?: boolean;
 };
 

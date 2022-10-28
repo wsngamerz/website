@@ -5,5 +5,3 @@ export const AboutPage = alinea.type("About Page", {
     path: alinea.path("Path", { width: 0.5, hidden: true }),
     bio: alinea.richText("Bio"),
 });
-
-export type AboutPage = alinea.infer<typeof AboutPage>;

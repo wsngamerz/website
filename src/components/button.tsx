@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { Fragment } from "react";
 
 import cx from "classnames";
 
@@ -17,8 +16,12 @@ const LinkButton = ({ children, to }) => {
     );
 };
 
+const EmptyDiv = ({ children }) => {
+    return <div>{children}</div>;
+};
+
 const Button = ({ children, to, wide }: Props) => {
-    const Wrapper = to !== undefined ? LinkButton : Fragment;
+    const Wrapper = to !== undefined ? LinkButton : EmptyDiv;
 
     return (
         <Wrapper to={to}>

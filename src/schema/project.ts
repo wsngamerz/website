@@ -25,5 +25,3 @@ export const Project = alinea.type(
         })
     )
 );
-
-export type Project = alinea.infer<typeof Project>;
