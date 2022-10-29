@@ -33,44 +33,42 @@ export default function Blog({ blog, featuredPost, posts }: Props) {
                 <Header title={blog.title} />
                 <Container>
                     <Link href={`/blog/${featuredPost.path}`}>
-                        <a>
-                            <div className="flex flex-col lg:flex-row rounded-lg p-4 shadow-md shadow-gray-300 h-full bg-white mb-8">
-                                <img
-                                    alt={`${featuredPost.title}`}
-                                    src={
-                                        featuredPost.coverImage
-                                            ? `/assets/${featuredPost.coverImage.src}`
-                                            : "https://via.placeholder.com/1200x400"
-                                    }
-                                    className="rounded-md object-cover shadow-sm shadow-gray-200 w-full lg:w-1/2"
-                                />
+                        <div className="flex flex-col lg:flex-row rounded-lg p-4 shadow-md shadow-gray-300 h-full bg-white mb-8">
+                            <img
+                                alt={`${featuredPost.title}`}
+                                src={
+                                    featuredPost.coverImage
+                                        ? `/assets/${featuredPost.coverImage.src}`
+                                        : "https://via.placeholder.com/1200x400"
+                                }
+                                className="rounded-md object-cover shadow-sm shadow-gray-200 w-full lg:w-1/2"
+                            />
 
-                                <div className="mt-2 lg:ml-4 lg:mt-0 flex flex-col">
-                                    <div className="flex gap-2 text-sm text-gray-600 items-center">
-                                        <span className="py-1 px-3 bg-cyan-500 text-white rounded">
-                                            Featured
-                                        </span>
-                                        <p>&#x2022;</p>
-                                        <DateFormatter
-                                            dateString={featuredPost.date}
-                                        />
-                                        <span>&#x2022;</span>
-                                        <span>{featuredPostWords} words</span>
-                                        <span>&#x2022;</span>
-                                        <span>
-                                            {featuredPostMins} min
-                                            {featuredPostMins != 1 && "s"}
-                                        </span>
-                                    </div>
-                                    <span className="font-bold text-xl pt-2">
-                                        {featuredPost.title}
+                            <div className="mt-2 lg:ml-4 lg:mt-0 flex flex-col">
+                                <div className="flex gap-2 text-sm text-gray-600 items-center">
+                                    <span className="py-1 px-3 bg-cyan-500 text-white rounded">
+                                        Featured
                                     </span>
-                                    <RichTextStyled
-                                        content={featuredPost.excerpt}
+                                    <p>&#x2022;</p>
+                                    <DateFormatter
+                                        dateString={featuredPost.date}
                                     />
+                                    <span>&#x2022;</span>
+                                    <span>{featuredPostWords} words</span>
+                                    <span>&#x2022;</span>
+                                    <span>
+                                        {featuredPostMins} min
+                                        {featuredPostMins != 1 && "s"}
+                                    </span>
                                 </div>
+                                <span className="font-bold text-xl pt-2">
+                                    {featuredPost.title}
+                                </span>
+                                <RichTextStyled
+                                    content={featuredPost.excerpt}
+                                />
                             </div>
-                        </a>
+                        </div>
                     </Link>
 
                     <div className="flex my-4 gap-2">

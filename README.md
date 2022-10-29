@@ -4,9 +4,10 @@ This website is built upon the existing [blog-starter](https://github.com/vercel
 
 # Development
 
-Start developing:
+Install packages and start developing:
 
 ```bash
+yarn install
 yarn dev
 ```
 

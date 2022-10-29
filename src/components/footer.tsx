@@ -45,9 +45,7 @@ const Footer = () => {
 
                 <div className="lg:flex lg:items-end lg:justify-between">
                     <Link href="/">
-                        <a>
-                            <Brand />
-                        </a>
+                        <Brand />
                     </Link>
 
                     <nav
@@ -61,10 +59,11 @@ const Footer = () => {
                         <ul className="flex flex-wrap justify-center gap-6 md:gap-8 lg:justify-end lg:gap-8">
                             {urls.map((url) => (
                                 <li key={url.name}>
-                                    <Link href={url.path}>
-                                        <a className="text-gray-700 transition hover:text-gray-700/75">
-                                            {url.name}
-                                        </a>
+                                    <Link
+                                        href={url.path}
+                                        className="text-gray-700 transition hover:text-gray-700/75"
+                                    >
+                                        {url.name}
                                     </Link>
                                 </li>
                             ))}

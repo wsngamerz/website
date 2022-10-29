@@ -19,9 +19,7 @@ const Navigation = () => {
                 <div className="flex items-center gap-4">
                     {/* Brand name */}
                     <Link href="/">
-                        <a>
-                            <Brand />
-                        </a>
+                        <Brand />
                     </Link>
 
                     {/* Search form */}
@@ -81,8 +79,12 @@ const Navigation = () => {
                 {/* Large display links */}
                 <div className="hidden items-center justify-center gap-8 text-sm font-medium lg:flex lg:w-0 lg:flex-1">
                     {urls.map((url) => (
-                        <Link key={url.name} href={url.path}>
-                            <a className="text-gray-900">{url.name}</a>
+                        <Link
+                            key={url.name}
+                            href={url.path}
+                            className="text-gray-900"
+                        >
+                            {url.name}
                         </Link>
                     ))}
                 </div>
@@ -92,10 +94,12 @@ const Navigation = () => {
             <div className="border-t border-gray-100 lg:hidden">
                 <div className="flex items-center justify-center overflow-x-auto p-4 text-sm font-medium">
                     {urls.map((url) => (
-                        <Link key={url.name} href={url.path}>
-                            <a className="flex-shrink-0 pl-4 text-gray-900">
-                                {url.name}
-                            </a>
+                        <Link
+                            key={url.name}
+                            href={url.path}
+                            className="flex-shrink-0 pl-4 text-gray-900"
+                        >
+                            {url.name}
                         </Link>
                     ))}
                 </div>

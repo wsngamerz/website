@@ -17,11 +17,7 @@ type Props = {
 };
 
 const LinkButton = ({ children, to }) => {
-    return (
-        <Link href={to}>
-            <a>{children}</a>
-        </Link>
-    );
+    return <Link href={to}>{children}</Link>;
 };
 
 const EmptyDiv = ({ children, to }) => {
