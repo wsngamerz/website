@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Link, graphql } from "gatsby";
-import { FaFacebook, FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 import Layout from "../components/Layout";
 import Meta from "../components/Meta";
@@ -128,6 +128,11 @@ const IndexPage = ({ data }) => {
                                     url="https://instagram.com/wneild5"
                                 />
                                 <SocialMediaItem text="Github" icon={FaGithub} url="https://github.com/wsngamerz" />
+                                <SocialMediaItem
+                                    text="Twitter"
+                                    icon={FaTwitter}
+                                    url="https://twitter.com/william_neild"
+                                />
                                 <SocialMediaItem
                                     text="Linkedin"
                                     icon={FaLinkedin}
