@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import Button from "../components/button";
+import { buttonVariants } from "../components/ui/button";
 import Card from "../components/card";
 import Header from "../components/header";
 import Layout from "../components/layout";
@@ -9,6 +9,7 @@ import RichTextStyled from "../components/rich-text";
 import { createApi } from "../lib/api";
 
 import type { Page } from "@alinea/content";
+import Link from "next/link";
 
 type Props = {
     page: Page.HomePage;
@@ -58,9 +59,12 @@ export default function Index({ page, recentPosts, topProjects }: Props) {
                             ))}
                         </div>
                         <div className="flex justify-center py-4">
-                            <Button to="/projects" wide>
+                            <Link
+                                href={"/projects"}
+                                className={buttonVariants()}
+                            >
                                 More Projects
-                            </Button>
+                            </Link>
                         </div>
                     </div>
                 )}
@@ -87,9 +91,9 @@ export default function Index({ page, recentPosts, topProjects }: Props) {
                         </div>
 
                         <div className="flex justify-center py-4">
-                            <Button to="/blog" wide>
+                            <Link href={"/blog"} className={buttonVariants()}>
                                 More Posts
-                            </Button>
+                            </Link>
                         </div>
                     </div>
                 )}

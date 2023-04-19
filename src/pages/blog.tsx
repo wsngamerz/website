@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 
-import Button from "../components/button";
+import { Button } from "../components/ui/button";
 import Card from "../components/card";
 import Container from "../components/container";
 import DateFormatter from "../components/date-formatter";
@@ -101,7 +101,7 @@ export default function Blog({ blog, featuredPost, posts }: Props) {
 
 export const getStaticProps = async (context) => {
     const api = createApi(context.previewData);
-    const blog = await api.getPage("Blog");
+    const blog = (await api.getPage("Blog")) as Page.BlogPage;
     const featuredPost = await api.getPostBySlug(blog.featuredPost.path);
     const posts = await api.getAllPosts();
 

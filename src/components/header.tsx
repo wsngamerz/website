@@ -1,7 +1,8 @@
-import cx from "classnames";
+import { cn } from "../lib/utils";
 import Typewriter from "typewriter-effect";
 
-import Button from "./button";
+import { buttonVariants } from "./ui/button";
+import Link from "next/link";
 
 type Props = {
     title?: string;
@@ -22,7 +23,7 @@ const Header = ({
 }: Props) => {
     return (
         <header
-            className={cx(
+            className={cn(
                 "flex justify-center items-center bg-gray-100",
                 big ? "h-[75vh]" : "h-[30vh] min-h-[14rem]"
             )}
@@ -47,9 +48,13 @@ const Header = ({
                 {buttons && (
                     <div className="py-8">
                         {buttons.map((button) => (
-                            <Button key={button[0]} to={button[1]}>
+                            <Link
+                                key={button[0]}
+                                href={button[1]}
+                                className={cn(buttonVariants(), "mr-2")}
+                            >
                                 {button[0]}
-                            </Button>
+                            </Link>
                         ))}
                     </div>
                 )}

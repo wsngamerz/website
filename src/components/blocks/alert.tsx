@@ -1,5 +1,5 @@
 import alinea from "alinea";
-import cx from "classnames";
+import { cn } from "../../lib/utils";
 
 export const AlertSchema = alinea.type("Alert", {
     level: alinea.select(
@@ -49,7 +49,7 @@ const Alert = ({ alert, level }: Props) => {
             break;
     }
 
-    return <div className={cx("rounded border p-4 m-4", extra)}>{alert}</div>;
+    return <div className={cn("rounded border p-4 m-4", extra)}>{alert}</div>;
 };
 
 export default Alert;

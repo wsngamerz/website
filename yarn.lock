@@ -1069,10 +1069,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"classnames@npm:^2.3.2":
-  version: 2.3.2
-  resolution: "classnames@npm:2.3.2"
-  checksum: 2c62199789618d95545c872787137262e741f9db13328e216b093eea91c85ef2bfb152c1f9e63027204e2559a006a92eb74147d46c800a9f96297ae1d9f96f4e
+"class-variance-authority@npm:^0.5.2":
+  version: 0.5.2
+  resolution: "class-variance-authority@npm:0.5.2"
+  peerDependencies:
+    typescript: ">= 4.5.5 < 6"
+  peerDependenciesMeta:
+    typescript:
+      optional: true
+  checksum: f463de31295b50a920e089b577aff11783112129ed9d13d61881038001baaacf0e17097ebe2c7ac30dd0260fb1a884f0662d7d7b0235b31e18d75ea9848e6ece
   languageName: node
   linkType: hard
 
@@ -1105,6 +1110,13 @@ __metadata:
     execa: ^5.1.1
     is-wsl: ^2.2.0
   checksum: 2c292acb59705494cbe07d7df7c8becff4f01651514d32ebd80f4aec2d20946d8f3824aac67ecdf2d09ef21fdf0eb24b6a7f033c137ccdceedc4661c54455c94
+  languageName: node
+  linkType: hard
+
+"clsx@npm:^1.2.1":
+  version: 1.2.1
+  resolution: "clsx@npm:1.2.1"
+  checksum: 30befca8019b2eb7dbad38cff6266cf543091dae2825c856a62a8ccf2c3ab9c2907c4d12b288b73101196767f66812365400a227581484a05f968b0307cfaf12
   languageName: node
   linkType: hard
 
@@ -2048,6 +2060,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lucide-react@npm:^0.162.0":
+  version: 0.162.0
+  resolution: "lucide-react@npm:0.162.0"
+  peerDependencies:
+    react: ^16.5.1 || ^17.0.0 || ^18.0.0
+  checksum: f986315bb8fbec88be7f09dce688e8a6fa4afe9e1c4d8eb958f7fa15a7fe1bee8132fc7f2c222ee189777ebd2b148cb0f6eb69c9df67fd94373424cfc0223d12
+  languageName: node
+  linkType: hard
+
 "make-fetch-happen@npm:^10.0.3":
   version: 10.2.1
   resolution: "make-fetch-happen@npm:10.2.1"
@@ -2894,16 +2915,20 @@ __metadata:
     "@types/react-dom": ^18.0.11
     alinea: ^0.3.2
     autoprefixer: ^10.4.14
-    classnames: ^2.3.2
+    class-variance-authority: ^0.5.2
+    clsx: ^1.2.1
     date-fns: ^2.29.3
     disqus-react: ^1.1.5
+    lucide-react: ^0.162.0
     next: ^13.3.0
     postcss: ^8.4.22
     prettier: ^2.8.7
     react: ^18.2.0
     react-dom: ^18.2.0
     serve: ^14.2.0
+    tailwind-merge: ^1.12.0
     tailwindcss: ^3.3.1
+    tailwindcss-animate: ^1.0.5
     typescript: ^5.0.4
     typewriter-effect: ^2.19.0
   languageName: unknown
@@ -3187,6 +3212,22 @@ __metadata:
   version: 1.0.0
   resolution: "supports-preserve-symlinks-flag@npm:1.0.0"
   checksum: 53b1e247e68e05db7b3808b99b892bd36fb096e6fba213a06da7fab22045e97597db425c724f2bbd6c99a3c295e1e73f3e4de78592289f38431049e1277ca0ae
+  languageName: node
+  linkType: hard
+
+"tailwind-merge@npm:^1.12.0":
+  version: 1.12.0
+  resolution: "tailwind-merge@npm:1.12.0"
+  checksum: 5ef323eec1051c4aa9626e29498f6c058dbbb242ca8156aa298de41ada3eda05a8f5f1260a57112c155f63b2e94c4b4ccab5386d60fae54de07aac6d9dbc60e4
+  languageName: node
+  linkType: hard
+
+"tailwindcss-animate@npm:^1.0.5":
+  version: 1.0.5
+  resolution: "tailwindcss-animate@npm:1.0.5"
+  peerDependencies:
+    tailwindcss: "*"
+  checksum: 6b558f85a6af0780f018e1d23736d56dd59795f051df413bc2cf2fc2a021d6b1a3b78066f93e1045f3a39c11ee191c728db79e606d9a1def07fdf6a10f045312
   languageName: node
   linkType: hard
 

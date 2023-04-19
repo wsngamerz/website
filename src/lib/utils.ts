@@ -1,3 +1,5 @@
+import { ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
 import { TextNode } from "@alinea/core";
 
 import type { TextDoc } from "alinea";
@@ -21,3 +23,7 @@ export const getWords = (textDoc: TextDoc): number => {
 export const getReadingMins = (words: number): number => {
     return Math.round(words / 200);
 };
+
+export function cn(...inputs: ClassValue[]) {
+    return twMerge(clsx(inputs));
+}

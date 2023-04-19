@@ -1,4 +1,4 @@
-import cx from "classnames";
+import { cn } from "../lib/utils";
 
 import Footer from "./footer";
 import Meta from "./meta";
@@ -15,7 +15,7 @@ const Layout = ({ preview, children, bgc }: Props) => {
         <>
             <Meta />
             <Navigation />
-            <div className={cx("min-h-screen", bgc !== undefined && bgc)}>
+            <div className={cn("min-h-screen", bgc !== undefined && bgc)}>
                 <main>{children}</main>
             </div>
             <Footer />
