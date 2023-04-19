@@ -1,6 +1,6 @@
-import { createCloudBackend } from "@alinea/cloud";
-import { BrowserPreview } from "@alinea/preview";
+// import { createCloudBackend } from "@alinea/cloud";
 import { alinea, MediaSchema } from "alinea";
+import { BrowserPreview } from "@alinea/preview";
 
 import { IcRoundInsertDriveFile } from "@alinea/ui/icons/IcRoundInsertDriveFile";
 import { IcRoundPermMedia } from "@alinea/ui/icons/IcRoundPermMedia";
@@ -34,13 +34,7 @@ const schema = alinea.schema({
 });
 
 export const config = alinea.createConfig({
-    dashboard: {
-        staticFile: "./public/admin.html",
-        dashboardUrl: "/admin.html",
-        handlerUrl: "/api/cms",
-    },
     schema,
-    backend: createCloudBackend(),
     workspaces: {
         main: alinea.workspace("Main", {
             source: "./content",
