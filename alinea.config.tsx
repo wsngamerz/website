@@ -1,5 +1,6 @@
 import { createCloudBackend } from "@alinea/cloud";
-import { alinea, BrowserPreview, MediaSchema } from "alinea";
+import { BrowserPreview } from "@alinea/preview";
+import { alinea, MediaSchema } from "alinea";
 
 import { IcRoundInsertDriveFile } from "@alinea/ui/icons/IcRoundInsertDriveFile";
 import { IcRoundPermMedia } from "@alinea/ui/icons/IcRoundPermMedia";
